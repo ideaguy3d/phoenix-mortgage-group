@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="materialApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Julius ES2015 Material</title>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="description" content="An app to implement algorithms using es2015 & typescript">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <!-- fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <style type="text/css">
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+</head>
+
+
+<body>
+
+<!-- MAIN-WRAPPER-section, give div row layout since I want to build this in a left to right fashion -->
+<section ng-cloak="" ng-controller="juliusSkillsCtrl as skill">
+    
+    <div ng-include="'dist/skills/views/main-content.html'"></div>
+
+</section><!-- END OF: MAIN-WRAPPER-section -->
+
+
+
+
+
+<!--------------------------------------->
+<!-- JavaScript Frameworks & Libraries -->
+<!--------------------------------------->
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script src="./bower_components/angular/angular.js"></script>
+<script src="./bower_components/angular-animate/angular-animate.js"></script>
+<script src="./bower_components/angular-aria/angular-aria.min.js"></script>
+<script src="./bower_components/angular-material/angular-material.js"></script>
+<script src="./bower_components/angular-messages/angular-messages.js"></script>
+<script src="./bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+
+
+<!--------------------------------------->
+<!---------- Custom JavaScript ---------->
+<!--------------------------------------->
+<!-- julius skill checker app -->
+<script src="./dist/skills/controllers/skills.ctrl.js"></script>
+<!-- skills manager -->
+<script src="./dist/models.js"></script>
+<script src="./dist/services/userService.js"></script>
+<script src="./dist/controllers/addUserDialogCtrl.js"></script>
+<script src="./dist/controllers/contactPanelCtrl.js"></script>
+<script src="./dist/controllers/mainCtrl.js"></script>
+<script src="./dist/boot.js"></script>
+
+
+</body>
+</html>

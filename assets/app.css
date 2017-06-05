@@ -1,0 +1,83 @@
+/*
+ Juluis Alvarado ,
+ material.julius3d.com style rules
+ */
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+md-toolbar h1 {
+    font-size: 1.250em;
+    font-weight: 400;
+    margin: auto;
+}
+
+md-toolbar .md-toolbar-tools h1 {
+    font-size: 1.250em;
+    font-weight: 400;
+}
+
+md-list .md-button {
+    color: inherit;
+    font-weight: 500;
+    text-align: left;
+    width: 100%;
+}
+
+md-list .md-button.selected {
+    color: #03a9f4;
+}
+
+md-sidenav md-list {
+    padding: 0 0 10px 0;
+}
+
+#content {
+    padding: 8px 40px;
+}
+
+#content md-icon.avatar {
+    margin-top:10px;
+}
+
+.avatar {
+    position: relative;
+    width: 128px;
+    height: 128px;
+    border: 2px solid #3e4f56;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    margin:0;
+    vertical-align: middle;
+    zoom: 0.70;
+    -webkit-transform: translateZ(0) scale(0.7);
+    -moz-transform: translateZ(0) scale(0.7);
+    -ms-transform: translateZ(0) scale(0.7);
+    -o-transform: translateZ(0) scale(0.7);
+    transform: translateZ(0) scale(0.7);
+}
+
+.scrollable-nav-content  {
+    position: absolute;
+    top:136px;
+    bottom:0;
+    left:0;
+    width:100%;
+    overflow: auto;
+}
+
+span.name {
+    font-weight:bold;
+    font-size:1.1em;
+    padding-left:6px;
+}
+
+.date-row {
+    margin: 16px 0;
+}
