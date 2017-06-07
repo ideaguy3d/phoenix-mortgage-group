@@ -953,8 +953,7 @@ footer.footer .copyright {
     letter-spacing: 1px;
     text-transform: uppercase;
     border-radius: 0;
-    color: rgb(41, 43, 44)
-
+    color: rgb(41, 43, 44);
 }
 
 .jbtn-primary2 {
@@ -964,7 +963,7 @@ footer.footer .copyright {
 
 .jbtn-primary:hover, .jbtn-primary:focus {
     color: #C2B49A;
-    border-color: white;
+    border-color: #C2B49A;
     background-color: white;
 }
 
@@ -1018,6 +1017,14 @@ a.text-primary:hover, a.text-primary:focus {
 
 .bg-inverse {
     background-color: #222 !important;
+}
+
+.bg-inverse-t50 {
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+.bg-t100 {
+    background-color: rgba(0,0,0,0);
 }
 
 .lead {
