@@ -7,12 +7,11 @@
 
 (function(){
     "use strict";
-    var app = angular.module('pmg-app'),
+    var app = angular.module('pmg-app', []),
         controllerId = 'CoreCtrl',
         serviceId = 'pmgDataService';
 
-    app.controller(controllerId,
-        [CoreCtrlClass]);
+    app.controller(controllerId, [CoreCtrlClass]);
     app.factory(serviceId, [pmgDataService]);
 
     function CoreCtrlClass() {

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="pmg-app">
 
-<head ng-app="pmg-app">
-	
+<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="Mortgage Calculator. Get free quotes from top lenders that reflect your loan situation.">
@@ -41,16 +40,15 @@
 			}
 		}
 	</style>
-
 </head>
 
-<body id="page-top">
+<body>
 
 <!-- button at top of page -->
 <a class="btn btn-block btn-full-width" href="http://www.phoenixmortgagegroup.com/default.aspx"
    target="_blank">
 	4*4 = {{ 4*4 }}
-	<img src="http://www.phoenixmortgagegroup.com/UploadFiles/0922080552/phoenix%20logo.jpg"
+	<img src="img/logo-dark.png"
 	     alt="logo" width="175" height="100">
 </a>
 
@@ -61,8 +59,8 @@
 			<!-------------------------------->
 			<!-- This is The Main Container -->
 			<!-------------------------------->
-			<div id="pmg-calc" class="container" >
-			
+			<div id="pmg-calc" class="container">
+				<property-used></property-used>
 			</div>
 		</div>
 	</div>
@@ -208,6 +206,14 @@
 
 <!-- Custom JavaScript -->
 <script src="app/phoenixmortgagegroup.js"></script>
+<script src="app/property_used/comp.property.used.js"></script>
+<script src="app/born/comp.born.js"></script>
+<script src="app/credit_score/comp.credit.score.js"></script>
+<script src="app/intro/comp.intro.js"></script>
+<script src="app/remaining_balance_1st/comp.remaining.balance1.js"></script>
+<script src="app/remaining_balance_2nd/comp.remaining.balance2.js"></script>
+<script src="app/second_mortgage/comp.second.mortgage.js"></script>
+<script src="app/value_estimate/comp.value.estimate.js"></script>
 
 </body>
 
