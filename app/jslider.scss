@@ -1,6 +1,34 @@
+/*
+Julius Alvarado
+www.julius3d.com
+*/
+
 $jblack: #434343;
 
-// ello good sir main container awesome
 #pmg-calc {
 	color: $jblack;
+	position: relative;
+	overflow: hidden;
+	
+	.active, .inactive {
+		-webkit-transition: left 0.5s linear;
+		-moz-transition: left 0.5s linear;
+		-ms-transition: left 0.5s linear;
+		-o-transition: left 0.5s linear;
+		transition: left 0.5s linear;
+	}
+	
+	.active {
+		left: 0 !important;
+	}
+	
+	.inactive.answered {
+		left: -1200px;
+	}
+	
+	.pmg-slide {
+		position: absolute;
+		left: 1200px
+	}
 }
+

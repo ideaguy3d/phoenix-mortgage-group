@@ -7,7 +7,7 @@
     "use strict";
 
     var app = angular.module('pmg-app'),
-        componentId = 'propertyUsed';
+        componentId = 'remainingBalance1';
 
     app.component(componentId, {
         templateUrl: 'app/remaining_balance_1st/temp.remaining.balance1.html',

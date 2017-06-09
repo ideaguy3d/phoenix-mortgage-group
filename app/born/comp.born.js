@@ -7,7 +7,7 @@
     "use strict";
 
     var app = angular.module('pmg-app'),
-        componentId = 'propertyUsed';
+        componentId = 'born';
 
     app.component(componentId, {
         templateUrl: 'app/born/temp.born.html',

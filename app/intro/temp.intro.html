@@ -1,4 +1,4 @@
-<section>
+<div>
 	<div class="text-center">
 		<br><br>
 		<h2>Mortgage Calculator</h2>
@@ -8,7 +8,7 @@
 	<!-- input forms begin -->
 	<div class="row mt-4">
 		<div class="col-lg-8 offset-lg-2">
-			<form>
+			<form ng-submit="$ctrl.btnClick()">
 				<div class="form-group">
 					<label for="exampleSelect1" class="lead">Type of property</label>
 					<select class="form-control" id="exampleSelect1">
@@ -37,7 +37,7 @@
 						<option>Mobile/Manufactured home</option>
 					</select>
 				</div>
-				<div class="form-group" class="lead">
+				<div class="form-group lead">
 					<label for="exampleSelect4" class="lead">Type of loan?</label>
 					<select class="form-control" id="exampleSelect4">
 						<option>Refinance</option>
@@ -45,8 +45,10 @@
 						<option>Home Equity Loan</option>
 					</select>
 				</div>
-				<button type="submit" class="btn jbtn jbtn-primary">See Your Results</button>
+				<button type="submit" class="btn jbtn jbtn-primary">
+					See Your Results
+				</button>
 			</form>
 		</div>
 	</div>
-</section>
+</div>

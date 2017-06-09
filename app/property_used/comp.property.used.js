@@ -11,14 +11,21 @@
 
     app.component(componentId, {
         templateUrl: 'app/property_used/temp.property.used.html',
-        bindings: {},
-        controller: [CompCtrlClass]
+        bindings: {activeSlide: '='},
+        controller: ['pmgUtilityService', CompCtrlClass]
     });
 
-    function CompCtrlClass() {
+    function CompCtrlClass(pmgUtilityService) {
         var vm = this, file = 'comp.property.used.js';
 
         vm.status = "This is working ^_^/ from [ "+file+" ]";
+
+        vm.primaryHome = function(){
+            var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
+            vm.activeSlide[activeKey].active = false;
+            vm.activeSlide[activeKey].qState = 'answered';
+            vm.activeSlide.zipCode.active = true;
+        };
 
         vm.$onInit = function(){
             console.log("jha - "+file+" Successfully initialized ^_^/");

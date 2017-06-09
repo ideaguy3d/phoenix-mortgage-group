@@ -7,7 +7,7 @@
     "use strict";
 
     var app = angular.module('pmg-app'),
-        componentId = 'propertyUsed';
+        componentId = 'creditScore';
 
     app.component(componentId, {
         templateUrl: 'app/property_used/temp.property.used.html',

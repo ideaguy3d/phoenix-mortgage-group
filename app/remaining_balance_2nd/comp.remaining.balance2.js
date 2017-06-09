@@ -5,7 +5,7 @@
     "use strict";
 
     var app = angular.module('pmg-app'),
-        componentId = '';
+        componentId = 'remainingBalance2';
 
     app.component(componentId, {
         templateUrl: '',

@@ -7,7 +7,7 @@
     "use strict";
 
     var app = angular.module('pmg-app'),
-        componentId = 'propertyUsed';
+        componentId = 'borrow';
 
     app.component(componentId, {
         templateUrl: 'app/borrow/temp.borrow.html',

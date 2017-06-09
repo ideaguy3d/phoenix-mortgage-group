@@ -1,2 +1,17 @@
+/*
+Julius Alvarado
+www.julius3d.com
+*/
 #pmg-calc {
-  color: #434343; }
+  color: #434343;
+  position: relative;
+  overflow: hidden; }
+  #pmg-calc .active, #pmg-calc .inactive {
+    transition: left 0.5s linear; }
+  #pmg-calc .active {
+    left: 0 !important; }
+  #pmg-calc .inactive.answered {
+    left: -1200px; }
+  #pmg-calc .pmg-slide {
+    position: absolute;
+    left: 1200px; }

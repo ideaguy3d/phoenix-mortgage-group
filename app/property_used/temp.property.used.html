@@ -1,8 +1,8 @@
 <!-- "How will this property be used" Questionnaire Section -->
-<section class="page-section pricing bg-t100" id="pricing">
+<div class="page-section pricing bg-t100" id="pricing">
 	<div class="container wow fadeIn">
+		<br>
 		<div class="text-center bg-inverse-t50">
-			<p><small>{{ $ctrl.status }}</small></p>
 			<h2>How will this property be used?</h2>
 		</div>
 		<div class="row">
@@ -10,12 +10,10 @@
 			<div class="col-md-4">
 				<div class="pricing-item featured-first">
 					<div class="price">
-						<h1>
-							<button><i class="fa fa-home fa-4x"></i></button>
-						</h1>
+						<h1><button ng-click="$ctrl.primaryHome()"><i class="fa fa-home fa-4x"></i></button></h1>
 					</div>
 					<hr class="colored">
-					<h4><a href="#" class="btn btn-secondary"><strong>Primary Home</strong></a></h4>
+					<h4><a href="#" class="btn btn-secondary" ng-click="$ctrl.primaryHome()"><strong>Primary Home</strong></a></h4>
 				</div>
 			</div>
 			
@@ -46,4 +44,4 @@
 			</div>
 		</div>
 	</div>
-</section>
+</div>
