@@ -3,43 +3,65 @@
 		<div class="text-center bg-inverse-t50">
 			<h2>Estimate your credit score.</h2>
 		</div>
+		
 		<div class="row">
-			<!-- Button 1 -->
-			<div class="col-md-4">
+			<!-- Button Excellent -->
+			<div class="col-md-3">
 				<div class="pricing-item featured-first">
 					<div class="price">
 						<h1>
-							<button><i class="fa fa-home fa-4x"></i></button>
+							<button ng-click="$ctrl.excellentClick()"><i class="fa fa-smile-o fa-4x"></i></button>
 						</h1>
 					</div>
 					<hr class="colored">
-					<h4><a href="#" class="btn btn-secondary"><strong>Primary Home</strong></a></h4>
+					<h4>
+						<a href="#" class="btn btn-secondary" ng-click="$ctrl.excellentClick()">
+							<strong>Excellent</strong>
+						</a>
+					</h4>
 				</div>
 			</div>
 			
-			<!-- Button 2 -->
-			<div class="col-md-4">
+			<!-- Button Good -->
+			<div class="col-md-3">
 				<div class="pricing-item featured-first">
 					<div class="price">
 						<h1 class="">
-							<button><i class="fa fa-briefcase fa-4x"></i></button>
+							<button ng-click="$ctrl.goodClick()"><i class="fa fa-smile-o fa-4x"></i></button>
 						</h1>
 					</div>
 					<hr class="colored">
-					<h4><a href="#" class="btn btn-secondary"><strong>Secondary Home</strong></a></h4>
+					<h4><a href="#" class="btn btn-secondary" ng-click="$ctrl.goodClick()">
+						<strong>Good</strong></a>
+					</h4>
 				</div>
 			</div>
 			
-			<!-- Button 3 -->
-			<div class="col-md-4">
+			<!-- Button Fair -->
+			<div class="col-md-3">
 				<div class="pricing-item featured-first">
 					<div class="price">
-						<h1 class="">
-							<button><i class="fa fa-money fa-4x"></i></button>
+						<h1>
+							<button ng-click="$ctrl.fairClick()"><i class="fa fa-meh-o fa-4x"></i></button>
 						</h1>
 					</div>
 					<hr class="colored">
-					<h4><a href="#" class="btn btn-secondary"><strong>Rental Property</strong></a></h4>
+					<h4><a href="#" class="btn btn-secondary" ng-click="$ctrl.fairClick()">
+						<strong>Fair</strong></a></h4>
+				</div>
+			</div>
+			
+			<!-- Button Poor -->
+			<div class="col-md-3">
+				<div class="pricing-item featured-first">
+					<div class="price">
+						<h1 class="">
+							<button ng-click="$ctrl.poorClick()"><i class="fa fa-frown-o fa-4x"></i></button>
+						</h1>
+					</div>
+					<hr class="colored">
+					<h4><a href="#" class="btn btn-secondary" ng-click="$ctrl.poorClick()">
+						<strong>Poor</strong></a></h4>
 				</div>
 			</div>
 		</div>

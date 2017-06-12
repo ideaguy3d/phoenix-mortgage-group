@@ -9,7 +9,7 @@
         componentId = 'vaLoan';
 
     app.component(componentId, {
-        templateUrl: 'app/11b_va_loan/temp.va.loan.html',
+        templateUrl: 'app/11a_va_loan/temp.va.loan.html',
         bindings: { activeSlide: '=' },
         controller: ['pmgUtilityService', CompCtrlClass]
     });
@@ -19,11 +19,24 @@
 
         vm.status = "This is working ^_^/ from [ "+file+" ]";
 
-        vm.btnClick = function () {
+        vm.yesClick = function () {
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
+            console.log(activeKey+" = activeKey");
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-            vm.activeSlide.valueEstimate.active = true;
+
+            // requires special logic
+            vm.activeSlide.bankruptcyQuestion.active = true;
+        };
+
+        vm.noClick = function () {
+            var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
+            console.log(activeKey+" = activeKey");
+            vm.activeSlide[activeKey].active = false;
+            vm.activeSlide[activeKey].qState = 'answered';
+
+            // requires special logic
+            vm.activeSlide.bankruptcyQuestion.active = true;
         };
 
         vm.$onInit = function(){

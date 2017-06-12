@@ -6,24 +6,27 @@
     "use strict";
 
     var app = angular.module('pmg-app'),
-        componentId = 'military';
+        componentId = 'ratesReady';
 
     app.component(componentId, {
-        templateUrl: 'app/10_military/temp.military.html',
+        templateUrl: 'app/15_rates_ready/temp.rates.ready.html',
         bindings: { activeSlide: '=' },
-        controller: ['pmgUtilityService', CompCtrlClass]
+        controller: ['pmgUtilityService', '$location', CompCtrlClass]
     });
 
-    function CompCtrlClass(pmgUtilityService) {
-        var vm = this, file = 'comp.military.js';
+    function CompCtrlClass(pmgUtilityService, $location) {
+        var vm = this, file = 'comp.rates.ready.js';
 
         vm.status = "This is working ^_^/ from [ "+file+" ]";
 
         vm.btnClick = function () {
-            var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
-            vm.activeSlide[activeKey].active = false;
-            vm.activeSlide[activeKey].qState = 'answered';
-            vm.activeSlide.valueEstimate.active = true;
+            // var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
+            // vm.activeSlide[activeKey].active = false;
+            // vm.activeSlide[activeKey].qState = 'answered';
+
+            // send user to pmg login page
+            console.log("should send user to pmg login page.");
+            location.assign("https://phoenixmortgagegroup.mortgage-application.net/MyAccount/AccountLogin.aspx");
         };
 
         vm.$onInit = function(){

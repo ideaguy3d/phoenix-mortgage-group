@@ -6,16 +6,16 @@
     "use strict";
 
     var app = angular.module('pmg-app'),
-        componentId = 'military';
+        componentId = 'bankruptcy';
 
     app.component(componentId, {
-        templateUrl: 'app/10_military/temp.military.html',
+        templateUrl: 'app/12_bankruptcy/temp.bankruptcy.html',
         bindings: { activeSlide: '=' },
         controller: ['pmgUtilityService', CompCtrlClass]
     });
 
     function CompCtrlClass(pmgUtilityService) {
-        var vm = this, file = 'comp.military.js';
+        var vm = this, file = 'comp.bankruptcy.js';
 
         vm.status = "This is working ^_^/ from [ "+file+" ]";
 
@@ -23,7 +23,11 @@
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-            vm.activeSlide.valueEstimate.active = true;
+            if(vm.activeSlide.bankruptcy.go2forclosure) {
+                vm.activeSlide.foreclosure.active = true;
+            } else {
+                vm.activeSlide.currentAddress.active = true;
+            }
         };
 
         vm.$onInit = function(){

@@ -4,29 +4,63 @@
 			<h2>Have you had a bankruptcy or foreclosure in the last 7 years?</h2>
 		</div>
 		<div class="row">
-			<!-- Button 1 -->
-			<div class="col-md-4">
+			<!-- Button No -->
+			<div class="col-md-3">
 				<div class="pricing-item featured-first">
 					<div class="price">
 						<h1>
-							<button><i class="fa fa-home fa-4x"></i></button>
+							<button ng-click="$ctrl.noClick()"><i class="fa fa-smile-o fa-4x"></i></button>
 						</h1>
 					</div>
 					<hr class="colored">
-					<h4><a href="#" class="btn btn-secondary"><strong>Primary Home</strong></a></h4>
+					<h4>
+						<a href="#" class="btn btn-secondary" ng-click="$ctrl.noClick()">
+							<strong>No</strong>
+						</a>
+					</h4>
 				</div>
 			</div>
 			
-			<!-- Button 2 -->
-			<div class="col-md-4">
+			<!-- Button Bankruptcy -->
+			<div class="col-md-3">
 				<div class="pricing-item featured-first">
 					<div class="price">
 						<h1 class="">
-							<button ng-click="$ctrl.btnClick()"><i class="fa fa-briefcase fa-4x"></i></button>
+							<button ng-click="$ctrl.bankruptcyClick()"><i class="fa fa-legal fa-4x"></i></button>
 						</h1>
 					</div>
 					<hr class="colored">
-					<h4><a href="#" class="btn btn-secondary" ng-click="$ctrl.btnClick()"><strong>Secondary Home</strong></a></h4>
+					<h4><a href="#" class="btn btn-secondary" ng-click="$ctrl.bankruptcyClick()">
+						<strong>Bankruptcy</strong></a>
+					</h4>
+				</div>
+			</div>
+			
+			<!-- Button Foreclosure -->
+			<div class="col-md-3">
+				<div class="pricing-item featured-first">
+					<div class="price">
+						<h1>
+							<button ng-click="$ctrl.foreclosureClick()"><i class="fa fa-lock fa-4x"></i></button>
+						</h1>
+					</div>
+					<hr class="colored">
+					<h4><a href="#" class="btn btn-secondary" ng-click="$ctrl.foreclosureClick()">
+						<strong>Foreclosure</strong></a></h4>
+				</div>
+			</div>
+			
+			<!-- Button Both -->
+			<div class="col-md-3">
+				<div class="pricing-item featured-first">
+					<div class="price">
+						<h1 class="">
+							<button ng-click="$ctrl.bothClick()"><i class="fa fa-frown-o fa-4x"></i></button>
+						</h1>
+					</div>
+					<hr class="colored">
+					<h4><a href="#" class="btn btn-secondary" ng-click="$ctrl.bothClick()">
+						<strong>Both</strong></a></h4>
 				</div>
 			</div>
 		</div>

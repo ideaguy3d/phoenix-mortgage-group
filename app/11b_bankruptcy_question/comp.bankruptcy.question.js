@@ -19,11 +19,34 @@
 
         vm.status = "This is working ^_^/ from [ "+file+" ]";
 
-        vm.btnClick = function () {
+        vm.bothClick = function () {
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-            vm.activeSlide.valueEstimate.active = true;
+
+            vm.activeSlide.bankruptcy.go2forclosure = true;
+            vm.activeSlide.bankruptcy.active = true;
+        };
+
+        vm.noClick = function () {
+            var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
+            vm.activeSlide[activeKey].active = false;
+            vm.activeSlide[activeKey].qState = 'answered';
+            vm.activeSlide.currentAddress.active = true;
+        };
+
+        vm.bankruptcyClick = function(){
+            var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
+            vm.activeSlide[activeKey].active = false;
+            vm.activeSlide[activeKey].qState = 'answered';
+            vm.activeSlide.bankruptcy.active = true;
+        };
+
+        vm.foreclosureClick = function(){
+            var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
+            vm.activeSlide[activeKey].active = false;
+            vm.activeSlide[activeKey].qState = 'answered';
+            vm.activeSlide.foreclosure.active = true;
         };
 
         vm.$onInit = function(){

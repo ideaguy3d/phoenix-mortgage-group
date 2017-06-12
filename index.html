@@ -148,48 +148,48 @@
 				<!-- 11a) veterans administration loan -->
 				<section class="pmg-slide"
 				         ng-class="{
-				         'active': activeSlide.military.active, 'inactive': !activeSlide.military.active,
-						 'answered': activeSlide.military.qState === 'answered'
+				         'active': activeSlide.vaLoan.active, 'inactive': !activeSlide.vaLoan.active,
+						 'answered': activeSlide.vaLoan.qState === 'answered'
 				         }">
 					<va-loan active-slide="activeSlide"></va-loan>
 				</section>
 				<!-- 11b) bankruptcy questionnaire -->
 				<section class="pmg-slide"
 				         ng-class="{
-				         'active': activeSlide.military.active, 'inactive': !activeSlide.military.active,
-						 'answered': activeSlide.military.qState === 'answered'
+				         'active': activeSlide.bankruptcyQuestion.active, 'inactive': !activeSlide.bankruptcyQuestion.active,
+						 'answered': activeSlide.bankruptcyQuestion.qState === 'answered'
 				         }">
 					<bankruptcy-question active-slide="activeSlide"></bankruptcy-question>
 				</section>
 				<!-- 12) bankruptcy slide -->
 				<section class="pmg-slide"
 				         ng-class="{
-				         'active': activeSlide.military.active, 'inactive': !activeSlide.military.active,
-						 'answered': activeSlide.military.qState === 'answered'
+				         'active': activeSlide.bankruptcy.active, 'inactive': !activeSlide.bankruptcy.active,
+						 'answered': activeSlide.bankruptcy.qState === 'answered'
 				         }">
 					<bankruptcy active-slide="activeSlide"></bankruptcy>
 				</section>
 				<!-- 13) foreclosure slide -->
 				<section class="pmg-slide"
 				         ng-class="{
-				         'active': activeSlide.military.active, 'inactive': !activeSlide.military.active,
-						 'answered': activeSlide.military.qState === 'answered'
+				         'active': activeSlide.foreclosure.active, 'inactive': !activeSlide.foreclosure.active,
+						 'answered': activeSlide.foreclosure.qState === 'answered'
 				         }">
 					<foreclosure active-slide="activeSlide"></foreclosure>
 				</section>
 				<!-- 14) current address -->
 				<section class="pmg-slide"
 				         ng-class="{
-				         'active': activeSlide.military.active, 'inactive': !activeSlide.military.active,
-						 'answered': activeSlide.military.qState === 'answered'
+				         'active': activeSlide.currentAddress.active, 'inactive': !activeSlide.currentAddress.active,
+						 'answered': activeSlide.currentAddress.qState === 'answered'
 				         }">
 					<current-address active-slide="activeSlide"></current-address>
 				</section>
 				<!-- 15) rates ready to view -->
 				<section class="pmg-slide"
 				         ng-class="{
-				         'active': activeSlide.military.active, 'inactive': !activeSlide.military.active,
-						 'answered': activeSlide.military.qState === 'answered'
+				         'active': activeSlide.ratesReady.active, 'inactive': !activeSlide.ratesReady.active,
+						 'answered': activeSlide.ratesReady.qState === 'answered'
 				         }">
 					<rates-ready active-slide="activeSlide"></rates-ready>
 				</section>
@@ -246,6 +246,12 @@
 <script src="app/3_zip_code/comp.zip.code.js"></script>
 <script src="app/7b_borrow/comp.borrow.js"></script>
 <script src="app/10_military/comp.military.js"></script>
+<script src="app/11a_va_loan/comp.va.loan.js"></script>
+<script src="app/11b_bankruptcy_question/comp.bankruptcy.question.js"></script>
+<script src="app/12_bankruptcy/comp.bankruptcy.js"></script>
+<script src="app/13_foreclosure/comp.foreclosure.js"></script>
+<script src="app/14_current_address/comp.current.address.js"></script>
+<script src="app/15_rates_ready/comp.rates.ready.js"></script>
 
 </body>
 

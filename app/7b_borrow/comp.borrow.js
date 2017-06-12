@@ -28,7 +28,7 @@
 
             // requires special logic
             vm.activeSlide.borrow.answer = 'yes';
-            vm.activeSlide.born.active = true;
+            vm.activeSlide.creditScore.active = true;
         };
 
         vm.noClick = function () {
@@ -39,7 +39,7 @@
 
             // requires special logic
             vm.activeSlide.borrow.answer = 'no';
-            vm.activeSlide.born.active = true;
+            vm.activeSlide.creditScore.active = true;
         };
 
         vm.$onInit = function(){
