@@ -19,24 +19,11 @@
 
         vm.status = "This is working ^_^/ from [ "+file+" ]";
 
-        vm.yesClick = function () {
+        vm.btnClick = function () {
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
-            console.log(activeKey+" = activeKey");
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-
-            // requires special logic
-            vm.activeSlide.vaLoan.active = true;
-        };
-
-        vm.noClick = function () {
-            var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
-            console.log(activeKey+" = activeKey");
-            vm.activeSlide[activeKey].active = false;
-            vm.activeSlide[activeKey].qState = 'answered';
-
-            // requires special logic
-            vm.activeSlide.bankruptcyQuestion.active = true;
+            vm.activeSlide.valueEstimate.active = true;
         };
 
         vm.$onInit = function(){

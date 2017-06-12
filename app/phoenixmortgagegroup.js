@@ -62,6 +62,30 @@
             military: {
                 active: false,
                 qState: 'unanswered'
+            },
+           vaLoan: {
+                active: false,
+                qState: 'unanswered'
+            },
+            bankruptcyQuestion: {
+                active: false,
+                qState: 'unanswered'
+            },
+            bankruptcy: {
+                active: false,
+                qState: 'unanswered'
+            },
+            foreclosure: {
+                active: false,
+                qState: 'unanswered'
+            },
+            currentAddress: {
+                active: false,
+                qState: 'unanswered'
+            },
+            ratesReady: {
+                active: false,
+                qState: 'unanswered'
             }
         }
     }

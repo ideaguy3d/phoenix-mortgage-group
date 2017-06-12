@@ -145,6 +145,54 @@
 				         }">
 					<military active-slide="activeSlide"></military>
 				</section>
+				<!-- 11a) veterans administration loan -->
+				<section class="pmg-slide"
+				         ng-class="{
+				         'active': activeSlide.military.active, 'inactive': !activeSlide.military.active,
+						 'answered': activeSlide.military.qState === 'answered'
+				         }">
+					<va-loan active-slide="activeSlide"></va-loan>
+				</section>
+				<!-- 11b) bankruptcy questionnaire -->
+				<section class="pmg-slide"
+				         ng-class="{
+				         'active': activeSlide.military.active, 'inactive': !activeSlide.military.active,
+						 'answered': activeSlide.military.qState === 'answered'
+				         }">
+					<bankruptcy-question active-slide="activeSlide"></bankruptcy-question>
+				</section>
+				<!-- 12) bankruptcy slide -->
+				<section class="pmg-slide"
+				         ng-class="{
+				         'active': activeSlide.military.active, 'inactive': !activeSlide.military.active,
+						 'answered': activeSlide.military.qState === 'answered'
+				         }">
+					<bankruptcy active-slide="activeSlide"></bankruptcy>
+				</section>
+				<!-- 13) foreclosure slide -->
+				<section class="pmg-slide"
+				         ng-class="{
+				         'active': activeSlide.military.active, 'inactive': !activeSlide.military.active,
+						 'answered': activeSlide.military.qState === 'answered'
+				         }">
+					<foreclosure active-slide="activeSlide"></foreclosure>
+				</section>
+				<!-- 14) current address -->
+				<section class="pmg-slide"
+				         ng-class="{
+				         'active': activeSlide.military.active, 'inactive': !activeSlide.military.active,
+						 'answered': activeSlide.military.qState === 'answered'
+				         }">
+					<current-address active-slide="activeSlide"></current-address>
+				</section>
+				<!-- 15) rates ready to view -->
+				<section class="pmg-slide"
+				         ng-class="{
+				         'active': activeSlide.military.active, 'inactive': !activeSlide.military.active,
+						 'answered': activeSlide.military.qState === 'answered'
+				         }">
+					<rates-ready active-slide="activeSlide"></rates-ready>
+				</section>
 			</div>
 		</div>
 	</div>
