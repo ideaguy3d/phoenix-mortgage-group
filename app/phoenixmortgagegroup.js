@@ -20,7 +20,8 @@
         $scope.activeSlide = {
             intro: {
                 active: true,
-                qState: 'unanswered'
+                qState: 'unanswered',
+                username: ''
             },
             propertyUsed: {
                 active: false,

@@ -20,10 +20,6 @@
         vm.status = "This is working ^_^/ from [ "+file+" ]";
 
         vm.btnClick = function () {
-            // var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
-            // vm.activeSlide[activeKey].active = false;
-            // vm.activeSlide[activeKey].qState = 'answered';
-
             // send user to pmg login page
             console.log("should send user to pmg login page.");
             location.assign("https://phoenixmortgagegroup.mortgage-application.net/MyAccount/AccountLogin.aspx");
