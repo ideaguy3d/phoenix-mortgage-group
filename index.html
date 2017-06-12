@@ -47,8 +47,7 @@
 <!-- button at top of page -->
 <a class="btn btn-block btn-full-width" href="http://www.phoenixmortgagegroup.com/default.aspx"
    target="_blank">
-	<img src="img/logo-dark.png"
-	     alt="logo" width="175" height="100">
+	<img src="img/logo-dark.png" alt="logo" width="175" height="100">
 </a>
 
 <header class="masthead" style="background-image: url('img/view1.jpg');">
@@ -58,7 +57,7 @@
 			<!-- This is The CORE Container -->
 			<!-------------------------------->
 			<div id="pmg-calc" class="container" ng-controller="CoreCtrl">
-				<!-- intro slide -->
+				<!-- 1) intro slide -->
 				<section class="pmg-slide"
 				         ng-class="{
 							'active': activeSlide.intro.active, 'inactive': !activeSlide.intro.active,
@@ -66,7 +65,7 @@
 						 }">
 					<intro active-slide="activeSlide"></intro>
 				</section>
-				<!-- property used slide -->
+				<!-- 2) property used slide -->
 				<section class="pmg-slide"
 				         ng-class="{
 						'active': activeSlide.propertyUsed.active, 'inactive': !activeSlide.propertyUsed.active,
@@ -74,7 +73,7 @@
 						}">
 					<property-used active-slide="activeSlide"></property-used>
 				</section>
-				<!-- zip code slide -->
+				<!-- 3) zip code slide -->
 				<section class="pmg-slide"
 				         ng-class="{
 						'active': activeSlide.zipCode.active, 'inactive': !activeSlide.zipCode.active,
@@ -82,13 +81,69 @@
 						}">
 					<zip-code active-slide="activeSlide"></zip-code>
 				</section>
-				<!-- value estimate slide -->
+				<!-- 4) value estimate slide -->
 				<section class="pmg-slide"
 				         ng-class="{
 				         'active': activeSlide.valueEstimate.active, 'inactive': !activeSlide.valueEstimate.active,
-						'answered': activeSlide.valueEstimate.qState === 'answered'
+						 'answered': activeSlide.valueEstimate.qState === 'answered'
 				         }">
 					<value-estimate active-slide="activeSlide"></value-estimate>
+				</section>
+				<!-- 5) remaining mortgage balance1 -->
+				<section class="pmg-slide"
+				         ng-class="{
+				         'active': activeSlide.valueEstimate.active, 'inactive': !activeSlide.valueEstimate.active,
+						 'answered': activeSlide.valueEstimate.qState === 'answered'
+				         }">
+					<remaining-balance1 active-slide="activeSlide"></remaining-balance1>
+				</section>
+				<!-- 6) second mortgage -->
+				<section class="pmg-slide"
+				         ng-class="{
+				            'active': activeSlide.secondMortgage.active, 'inactive': !activeSlide.secondMortgage.active,
+						    'answered': activeSlide.secondMortgage.qState === 'answered'
+				         }">
+						<second-mortgage active-slide="activeSlide"></second-mortgage>
+				</section>
+				<!-- 7a) remaining balance 2 -->
+				<section class="pmg-slide"
+				         ng-class="{
+				         'active': activeSlide.remainingBalance2.active, 'inactive': !activeSlide.remainingBalance2.active,
+						 'answered': activeSlide.remainingBalance2.qState === 'answered'
+				         }">
+					<remaining-balance2 active-slide="activeSlide"></remaining-balance2>
+				</section>
+				<!-- 7b) borrow -->
+				<section class="pmg-slide"
+				         ng-class="{
+				            'active': activeSlide.borrow.active, 'inactive': !activeSlide.borrow.active,
+						    'answered': activeSlide.borrow.qState === 'answered'
+				         }">
+					<borrow active-slide="activeSlide"></borrow>
+				</section>
+				<!-- 8) credit score -->
+				<section class="pmg-slide"
+				         ng-class="{
+				         'active': activeSlide.creditScore.active, 'inactive': !activeSlide.creditScore.active,
+						 'answered': activeSlide.creditScore.qState === 'answered'
+				         }">
+					<credit-score active-slide="activeSlide"></credit-score>
+				</section>
+				<!-- 9) born -->
+				<section class="pmg-slide"
+				         ng-class="{
+				         'active': activeSlide.born.active, 'inactive': !activeSlide.born.active,
+						 'answered': activeSlide.born.qState === 'answered'
+				         }">
+					<born active-slide="activeSlide"></born>
+				</section>
+				<!-- 10) military -->
+				<section class="pmg-slide"
+				         ng-class="{
+				         'active': activeSlide.military.active, 'inactive': !activeSlide.military.active,
+						 'answered': activeSlide.military.qState === 'answered'
+				         }">
+					<military active-slide="activeSlide"></military>
 				</section>
 			</div>
 		</div>
@@ -132,15 +187,17 @@
 
 <!-- Custom JavaScript -->
 <script src="app/phoenixmortgagegroup.js"></script>
-<script src="app/property_used/comp.property.used.js"></script>
-<script src="app/born/comp.born.js"></script>
-<script src="app/credit_score/comp.credit.score.js"></script>
-<script src="app/intro/comp.intro.js"></script>
-<script src="app/remaining_balance_1st/comp.remaining.balance1.js"></script>
-<script src="app/remaining_balance_2nd/comp.remaining.balance2.js"></script>
-<script src="app/second_mortgage/comp.second.mortgage.js"></script>
-<script src="app/value_estimate/comp.value.estimate.js"></script>
-<script src="app/zip_code/comp.zip.code.js"></script>
+<script src="app/2_property_used/comp.property.used.js"></script>
+<script src="app/9_born/comp.born.js"></script>
+<script src="app/8_credit_score/comp.credit.score.js"></script>
+<script src="app/1_intro/comp.intro.js"></script>
+<script src="app/5_remaining_balance_1st/comp.remaining.balance1.js"></script>
+<script src="app/7a_remaining_balance_2nd/comp.remaining.balance2.js"></script>
+<script src="app/6_second_mortgage/comp.second.mortgage.js"></script>
+<script src="app/4_estimate_value/comp.value.estimate.js"></script>
+<script src="app/3_zip_code/comp.zip.code.js"></script>
+<script src="app/7b_borrow/comp.borrow.js"></script>
+<script src="app/10_military/comp.military.js"></script>
 
 </body>
 

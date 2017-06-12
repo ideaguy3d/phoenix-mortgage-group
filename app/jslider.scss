@@ -11,11 +11,11 @@ $jblack: #434343;
 	overflow: hidden;
 	
 	.active, .inactive {
-		-webkit-transition: left 0.5s linear;
-		-moz-transition: left 0.5s linear;
-		-ms-transition: left 0.5s linear;
-		-o-transition: left 0.5s linear;
-		transition: left 0.5s linear;
+		-webkit-transition: left 0.5s ease-in;
+		-moz-transition: left 0.5s ease-in;
+		-ms-transition: left 0.5s ease-in;
+		-o-transition: left 0.5s ease-in;
+		transition: left 0.5s ease-in;
 	}
 	
 	.active {
@@ -28,7 +28,7 @@ $jblack: #434343;
 	
 	.pmg-slide {
 		position: absolute;
-		left: 1200px
+		left: 1200px;
 	}
 }
 

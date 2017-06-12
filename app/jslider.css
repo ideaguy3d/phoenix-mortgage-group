@@ -7,7 +7,7 @@ www.julius3d.com
   position: relative;
   overflow: hidden; }
   #pmg-calc .active, #pmg-calc .inactive {
-    transition: left 0.5s linear; }
+    transition: left 0.5s ease-in; }
   #pmg-calc .active {
     left: 0 !important; }
   #pmg-calc .inactive.answered {

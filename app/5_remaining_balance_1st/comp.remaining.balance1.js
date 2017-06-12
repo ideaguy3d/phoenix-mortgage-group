@@ -7,16 +7,16 @@
     "use strict";
 
     var app = angular.module('pmg-app'),
-        componentId = 'zipCode';
+        componentId = 'remainingBalance1';
 
     app.component(componentId, {
-        templateUrl: 'app/zip_code/temp.zip.code.html',
+        templateUrl: 'app/5_remaining_balance_1st/temp.remaining.balance1.html',
         bindings: {activeSlide: '='},
-        controller: ['pmgUtilityService', CompCtrlClass]
+        controller: ['pmgUtilityService', CompCtrlClass ]
     });
 
     function CompCtrlClass(pmgUtilityService) {
-        var vm = this, file = 'comp.zip.code.js';
+        var vm = this, file = 'comp.remaining.balance1.js';
 
         vm.status = "This is working ^_^/ from [ "+file+" ]";
 
@@ -24,7 +24,7 @@
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-            vm.activeSlide.valueEstimate.active = true;
+            vm.activeSlide.secondMortgage.active = true;
         };
 
         vm.$onInit = function(){

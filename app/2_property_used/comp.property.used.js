@@ -10,7 +10,7 @@
         componentId = 'propertyUsed';
 
     app.component(componentId, {
-        templateUrl: 'app/property_used/temp.property.used.html',
+        templateUrl: 'app/2_property_used/temp.property.used.html',
         bindings: {activeSlide: '='},
         controller: ['pmgUtilityService', CompCtrlClass]
     });
@@ -21,6 +21,20 @@
         vm.status = "This is working ^_^/ from [ "+file+" ]";
 
         vm.primaryHome = function(){
+            var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
+            vm.activeSlide[activeKey].active = false;
+            vm.activeSlide[activeKey].qState = 'answered';
+            vm.activeSlide.zipCode.active = true;
+        };
+
+        vm.secondaryHome = function(){
+            var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
+            vm.activeSlide[activeKey].active = false;
+            vm.activeSlide[activeKey].qState = 'answered';
+            vm.activeSlide.zipCode.active = true;
+        };
+
+        vm.rentalProperty = function(){
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';

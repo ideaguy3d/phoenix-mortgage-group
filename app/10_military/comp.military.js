@@ -1,30 +1,29 @@
 /**
- * Created by Julius Alvarado on 6/7/2017.
+ * Created by Julius Alvarado on 6/11/2017.
  */
-
 
 (function () {
     "use strict";
 
     var app = angular.module('pmg-app'),
-        componentId = 'intro';
+        componentId = 'military';
 
     app.component(componentId, {
-        templateUrl: 'app/intro/temp.intro.html',
+        templateUrl: 'app/10_military/temp.military.html',
         bindings: { activeSlide: '=' },
         controller: ['pmgUtilityService', CompCtrlClass]
     });
 
     function CompCtrlClass(pmgUtilityService) {
-        var vm = this, file = 'comp.intro.js';
+        var vm = this, file = 'comp.military.js';
 
         vm.status = "This is working ^_^/ from [ "+file+" ]";
 
-        vm.btnClick = function(){
+        vm.btnClick = function () {
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-            vm.activeSlide.propertyUsed.active = true;
+            vm.activeSlide.valueEstimate.active = true;
         };
 
         vm.$onInit = function(){

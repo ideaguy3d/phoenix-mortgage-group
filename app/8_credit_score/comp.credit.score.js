@@ -7,16 +7,16 @@
     "use strict";
 
     var app = angular.module('pmg-app'),
-        componentId = 'born';
+        componentId = 'creditScore';
 
     app.component(componentId, {
-        templateUrl: 'app/born/temp.born.html',
-        bindings: {},
+        templateUrl: 'app/8_credit_score/temp.credit.score.html',
+        bindings: {activeSlide: '='},
         controller: [CompCtrlClass]
     });
 
     function CompCtrlClass() {
-        var vm = this, file = 'comp.born.js';
+        var vm = this, file = 'comp.credit.score.js';
 
         vm.status = "This is working ^_^/ from [ "+file+" ]";
 

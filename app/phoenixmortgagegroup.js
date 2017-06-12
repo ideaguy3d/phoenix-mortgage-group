@@ -37,6 +37,31 @@
             remainingBalance1: {
                 active: false,
                 qState: 'unanswered'
+            },
+            secondMortgage: {
+                active: false,
+                qState: 'unanswered',
+                answer: 'a'
+            },
+            remainingBalance2: {
+                active: false,
+                qState: 'unanswered'
+            },
+            borrow: {
+                active: false,
+                qState: 'unanswered'
+            },
+            creditScore: {
+                active: false,
+                qState: 'unanswered'
+            },
+            born: {
+                active: false,
+                qState: 'unanswered'
+            },
+            military: {
+                active: false,
+                qState: 'unanswered'
             }
         }
     }
@@ -47,10 +72,8 @@
     
     function pmgUtilityService() {
         var activeKey = function(activeSlide){
-            console.log("in activeKey util method");
             var zKey = '';
             for(var k in activeSlide) {
-                console.log("k = "+k);
                 if(activeSlide.hasOwnProperty(k)) {
                     if(activeSlide[k].active) {
                         zKey = k;
