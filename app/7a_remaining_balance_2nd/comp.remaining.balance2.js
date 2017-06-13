@@ -24,9 +24,5 @@
             // requires special logic
             vm.activeSlide.borrow.active = true;
         };
-
-        vm.$onInit = function(){
-
-        };
     }
 }());

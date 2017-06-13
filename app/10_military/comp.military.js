@@ -24,8 +24,7 @@
             console.log(activeKey+" = activeKey");
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-
-            // requires special logic
+            vm.activeSlide.military.priorMilitary = true;
             vm.activeSlide.vaLoan.active = true;
         };
 
@@ -34,8 +33,7 @@
             console.log(activeKey+" = activeKey");
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-
-            // requires special logic
+            vm.activeSlide.military.priorMilitary = false;
             vm.activeSlide.bankruptcyQuestion.active = true;
         };
 

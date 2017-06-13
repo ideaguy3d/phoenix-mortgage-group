@@ -24,6 +24,7 @@
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
+            vm.activeSlide.creditScore.creditEstimate = 'excellent(more than 720)';
             vm.activeSlide.born.active = true;
         };
 
@@ -31,6 +32,7 @@
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
+            vm.activeSlide.creditScore.creditEstimate = 'good(680 to 719)';
             vm.activeSlide.born.active = true;
         };
 
@@ -38,6 +40,7 @@
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
+            vm.activeSlide.creditScore.creditEstimate = 'fair(640 to 679)';
             vm.activeSlide.born.active = true;
         };
 
@@ -45,11 +48,8 @@
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
+            vm.activeSlide.creditScore.creditEstimate = 'poor(less than 639)';
             vm.activeSlide.born.active = true;
-        };
-
-        vm.$onInit = function(){
-            console.log("jha - "+file+" Successfully initialized ^_^/");
         };
     }
 }());

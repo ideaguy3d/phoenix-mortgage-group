@@ -24,23 +24,16 @@
             console.log(activeKey+" = activeKey");
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-
-            // requires special logic
+            vm.activeSlide.vaLoan.hadVaLoan = true;
             vm.activeSlide.bankruptcyQuestion.active = true;
         };
 
         vm.noClick = function () {
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
-            console.log(activeKey+" = activeKey");
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-
-            // requires special logic
+            vm.activeSlide.vaLoan.hadVaLoan = false;
             vm.activeSlide.bankruptcyQuestion.active = true;
-        };
-
-        vm.$onInit = function(){
-            console.log("jha - "+file+" Successfully initialized ^_^/");
         };
     }
 }());

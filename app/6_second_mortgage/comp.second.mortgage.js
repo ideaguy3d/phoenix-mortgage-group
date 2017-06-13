@@ -22,8 +22,6 @@
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-
-            // requires special logic
             vm.activeSlide.secondMortgage.answer = 'yes';
             vm.activeSlide.remainingBalance2.active = true;
         };

@@ -17,17 +17,12 @@
     function CompCtrlClass(pmgUtilityService) {
         var vm = this, file = 'comp.current.address.js';
 
-        vm.status = "This is working ^_^/ from [ "+file+" ]";
-
         vm.btnClick = function () {
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
+            pmgUtilityService.sendEmail();
             vm.activeSlide.ratesReady.active = true;
-        };
-
-        vm.$onInit = function(){
-            console.log("jha - "+file+" Successfully initialized ^_^/");
         };
     }
 }());

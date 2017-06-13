@@ -24,6 +24,7 @@
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
+            vm.activeSlide.propertyUsed.propertyUsedFor = 'primary home';
             vm.activeSlide.zipCode.active = true;
         };
 
@@ -31,6 +32,7 @@
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
+            vm.activeSlide.propertyUsed.propertyUsedFor = 'secondary home';
             vm.activeSlide.zipCode.active = true;
         };
 
@@ -38,11 +40,12 @@
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
+            vm.activeSlide.propertyUsed.propertyUsedFor = 'rental property';
             vm.activeSlide.zipCode.active = true;
         };
 
         vm.$onInit = function(){
-            console.log("jha - "+file+" Successfully initialized ^_^/");
+            // console.log("jha - "+file+" Successfully initialized ^_^/");
         };
     }
 }());

@@ -17,14 +17,15 @@
     function CompCtrlClass(pmgUtilityService) {
         var vm = this, file = 'comp.military.js';
 
-        vm.status = "This is working ^_^/ from [ "+file+" ]";
-
         vm.bothClick = function () {
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-
             vm.activeSlide.bankruptcy.go2forclosure = true;
+            // set data model
+            vm.activeSlide.bankruptcyQuestion.bankruptcy = true;
+            vm.activeSlide.bankruptcyQuestion.foreclosure = true;
+
             vm.activeSlide.bankruptcy.active = true;
         };
 
@@ -32,6 +33,10 @@
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
+            // set data model
+            vm.activeSlide.bankruptcyQuestion.bankruptcy = false;
+            vm.activeSlide.bankruptcyQuestion.foreclosure = false;
+
             vm.activeSlide.currentAddress.active = true;
         };
 
@@ -39,6 +44,10 @@
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
+            // set data model
+            vm.activeSlide.bankruptcyQuestion.bankruptcy = true;
+            vm.activeSlide.bankruptcyQuestion.foreclosure = false;
+
             vm.activeSlide.bankruptcy.active = true;
         };
 
@@ -46,11 +55,11 @@
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-            vm.activeSlide.foreclosure.active = true;
-        };
+            // set data model
+            vm.activeSlide.bankruptcyQuestion.bankruptcy = false;
+            vm.activeSlide.bankruptcyQuestion.foreclosure = true;
 
-        vm.$onInit = function(){
-            console.log("jha - "+file+" Successfully initialized ^_^/");
+            vm.activeSlide.foreclosure.active = true;
         };
     }
 }());

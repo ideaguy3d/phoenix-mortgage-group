@@ -12,7 +12,7 @@
     app.component(componentId, {
         templateUrl: 'app/5_remaining_balance_1st/temp.remaining.balance1.html',
         bindings: {activeSlide: '='},
-        controller: ['pmgUtilityService', CompCtrlClass ]
+        controller: [ 'pmgUtilityService', CompCtrlClass ]
     });
 
     function CompCtrlClass(pmgUtilityService) {
