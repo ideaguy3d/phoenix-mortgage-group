@@ -21,10 +21,11 @@
 
         vm.btnClick = function () {
             //-- SEND THE EMAIL:
-
+            console.log("email date: ");
+            console.log(pmgUtilityService.emailData());
             // send user to pmg login page
             console.log("should send user to pmg login page.");
-            location.assign("https://phoenixmortgagegroup.mortgage-application.net/MyAccount/AccountLogin.aspx");
+            //location.assign("https://phoenixmortgagegroup.mortgage-application.net/MyAccount/AccountLogin.aspx");
         };
 
         vm.$onInit = function(){

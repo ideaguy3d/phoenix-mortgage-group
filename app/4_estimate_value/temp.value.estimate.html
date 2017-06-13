@@ -4,45 +4,19 @@
 		<div class="text-center bg-inverse-t50">
 			<h2>Please estimate the value of the property.</h2>
 		</div>
-		<div class="row">
-			<!-- Button 1 -->
-			<div class="col-md-4">
-				<div class="pricing-item featured-first">
-					<div class="price">
-						<h1>
-							<button><i class="fa fa-home fa-4x"></i></button>
-						</h1>
-					</div>
-					<hr class="colored">
-					<h4><a href="#" class="btn btn-secondary"><strong>Primary Home</strong></a></h4>
+		
+		<form class="form-group row" ng-submit="$ctrl.btnClick()">
+			<div class="mx-auto" style="width: 60%;">
+				<label class="sr-only" for="value">Estimated Value</label>
+				<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+					<div class="input-group-addon">$</div>
+					<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="value" required
+					       ng-model="$ctrl.activeSlide.estimateValue.value"
+					       placeholder="estimate from $60k to $2m+, use commas if you want">
 				</div>
+				<br>
+				<button type="submit" class="btn btn-success">Continue</button>
 			</div>
-			
-			<!-- Button 2 -->
-			<div class="col-md-4">
-				<div class="pricing-item featured-first">
-					<div class="price">
-						<h1 class="">
-							<button><i class="fa fa-briefcase fa-4x"></i></button>
-						</h1>
-					</div>
-					<hr class="colored">
-					<h4><a href="#" class="btn btn-secondary"><strong>Secondary Home</strong></a></h4>
-				</div>
-			</div>
-			
-			<!-- Button 3 -->
-			<div class="col-md-4">
-				<div class="pricing-item featured-first">
-					<div class="price">
-						<h1 class="">
-							<button><i class="fa fa-money fa-4x"></i></button>
-						</h1>
-					</div>
-					<hr class="colored">
-					<h4><a href="#" class="btn btn-secondary"><strong>Rental Property</strong></a></h4>
-				</div>
-			</div>
-		</div>
+		</form>
 	</div>
 </div>

@@ -50,6 +50,7 @@
             // this is the all important Data !!
             var c_message = pmgData();
             console.log(c_message);
+
             if (!vm.endSlide) {
                 var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
                 vm.activeSlide[activeKey].active = false;
@@ -65,7 +66,8 @@
             var responseMessage = jQuery('#ajax-response');
 
             // Front End Validation
-            if ((c_email == "" || c_message == "") || (!isValidEmailAddress(c_email) )) {
+            var validationCheck = (c_email == "" || c_message == "") || (!isValidEmailAddress(c_email) );
+            if (validationCheck) {
                 vm.pmgError = "Please correct mistakes.";
                 responseMessage.fadeIn(500);
                 responseMessage.html('<i class="fa fa-warning"></i> Check all fields.');

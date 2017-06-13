@@ -23,7 +23,7 @@
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-            vm.activeSlide.valueEstimate.active = true;
+            vm.activeSlide.estimateValue.active = true;
         };
 
         vm.$onInit = function(){

@@ -84,16 +84,16 @@
 				<!-- 4) value estimate slide -->
 				<section class="pmg-slide"
 				         ng-class="{
-				         'active': activeSlide.valueEstimate.active, 'inactive': !activeSlide.valueEstimate.active,
-						 'answered': activeSlide.valueEstimate.qState === 'answered'
+				         'active': activeSlide.estimateValue.active, 'inactive': !activeSlide.estimateValue.active,
+						 'answered': activeSlide.estimateValue.qState === 'answered'
 				         }">
-					<value-estimate active-slide="activeSlide"></value-estimate>
+					<estimate-value active-slide="activeSlide"></estimate-value>
 				</section>
 				<!-- 5) remaining mortgage balance1 -->
 				<section class="pmg-slide"
 				         ng-class="{
-				         'active': activeSlide.valueEstimate.active, 'inactive': !activeSlide.valueEstimate.active,
-						 'answered': activeSlide.valueEstimate.qState === 'answered'
+				         'active': activeSlide.remainingBalance1.active, 'inactive': !activeSlide.remainingBalance1.active,
+						 'answered': activeSlide.remainingBalance1.qState === 'answered'
 				         }">
 					<remaining-balance1 active-slide="activeSlide"></remaining-balance1>
 				</section>
