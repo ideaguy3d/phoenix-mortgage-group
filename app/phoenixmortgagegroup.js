@@ -12,11 +12,11 @@
         serviceId = 'pmgDataService',
         utilityId = 'pmgUtilityService';
 
-    app.controller(controllerId, ["$scope", CoreCtrlClass]);
+    app.controller(controllerId, ["$scope", "$window", "pmgUtilityService", CoreCtrlClass]);
     app.factory(utilityId, [pmgUtilityService]);
     var pmgDataModel = {}, bar = ", \n";
 
-    function CoreCtrlClass($scope) {
+    function CoreCtrlClass($scope, $window, pmgUtilityService) {
         $scope.activeSlide = {
             intro: {
                 active: true,
@@ -111,6 +111,13 @@
         };
         // make a copy of the data
         pmgDataModel = $scope.activeSlide;
+
+        $window.onbeforeunload = function(e){
+            var text = "Thanks for visiting.";
+            pmgUtilityService.sendEmail();
+            e.returnValue = null;
+            return null;
+        }
     }
 
     function pmgUtilityService() {
@@ -139,7 +146,7 @@
             var zipCode = "Zip code: " + pmgDataModel.zipCode.zip + bar;
             var mortgage_1st = "1st mortgage estimated value: " + pmgDataModel.estimateValue.value
                 + " with a remaining amount of " + pmgDataModel.remainingBalance1.balance + bar;
-            var mortgage_2nd = "2nd Mortgage: " + pmgDataModel.secondMortgage.has2ndMortgage +
+            var mortgage_2nd = "2nd Mortgage: " + pmgDataModel.secondMortgage.answer +
                 " with an estimated balance of " + pmgDataModel.remainingBalance2.balance + bar;
             var wants2borrow = "Wants to borrow: " + pmgDataModel.borrow.amount + bar;
             var credit = "Credit estimate: " + pmgDataModel.creditScore.creditEstimate + bar;
@@ -164,7 +171,7 @@
             var messageCheck = typeof c_email === "string";
             var validationCheck = (!emailCheck || !messageCheck) || (!isValidEmailAddress(c_email) );
             if (validationCheck) {
-                console.log("Email data did not pass validation check.");
+                console.error("Email data did not pass validation check.");
             }
             else {
                 jQuery.ajax({
