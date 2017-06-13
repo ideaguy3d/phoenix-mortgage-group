@@ -21,7 +21,9 @@
             intro: {
                 active: true,
                 qState: 'unanswered',
-                username: ''
+                username: '',
+                email: 'user@mail.com',
+                phoneNumber: 4151234567
             },
             propertyUsed: {
                 active: false,
@@ -29,7 +31,8 @@
             },
             zipCode: {
                 active: false,
-                qState: 'unanswered'
+                qState: 'unanswered',
+                zip: 12345
             },
             valueEstimate: {
                 active: false,
@@ -37,7 +40,8 @@
             },
             remainingBalance1: {
                 active: false,
-                qState: 'unanswered'
+                qState: 'unanswered',
+                balance: ''
             },
             secondMortgage: {
                 active: false,
@@ -46,11 +50,13 @@
             },
             remainingBalance2: {
                 active: false,
-                qState: 'unanswered'
+                qState: 'unanswered',
+                balance: ''
             },
             borrow: {
                 active: false,
-                qState: 'unanswered'
+                qState: 'unanswered',
+                amount: ''
             },
             creditScore: {
                 active: false,
@@ -58,7 +64,10 @@
             },
             born: {
                 active: false,
-                qState: 'unanswered'
+                qState: 'unanswered',
+                day: '',
+                month: '',
+                year: ''
             },
             military: {
                 active: false,
@@ -74,15 +83,18 @@
             },
             bankruptcy: {
                 active: false,
-                qState: 'unanswered'
+                qState: 'unanswered',
+                yearsAgo: ''
             },
             foreclosure: {
                 active: false,
-                qState: 'unanswered'
+                qState: 'unanswered',
+                yearsAgo: ''
             },
             currentAddress: {
                 active: false,
-                qState: 'unanswered'
+                qState: 'unanswered',
+                location: ''
             },
             ratesReady: {
                 active: false,

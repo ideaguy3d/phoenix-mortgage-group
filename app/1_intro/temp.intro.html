@@ -4,78 +4,83 @@
 		<br><br>
 		<h2 ng-if="$ctrl.nameForm">Hi, what's your name?</h2>
 		<form ng-if="$ctrl.nameForm" class="form-inline mx-auto" ng-submit="$ctrl.nameSubmit()">
-			<div class="mx-auto" style="width: 600px;">
+			<div class="mx-auto" style="width: 60%;">
 				<label class="sr-only" for="inlineFormInput">Name</label>
 				<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput"
 				       ng-model="$ctrl.activeSlide.intro.username" placeholder="Your Name">
 				<button type="submit" class="btn btn-success">Enter</button>
 			</div>
 		</form>
-		<h2 ng-if="!$ctrl.nameForm">Hello {{ $ctrl.activeSlide.intro.username }} <i class="fa fa-"></i> </h2>
+		<h2 ng-if="!$ctrl.nameForm">Hello {{ $ctrl.activeSlide.intro.username }} <i class="fa fa-"></i></h2>
 		<br>
 		<h4>At Phoenix Mortgage we are about getting rid of your Hassle.</h4>
 		<hr class="colored">
 	</div>
 	<br>
+	<!--  -->
 	<div class="page-section pricing bg-t100" id="pricing">
 		<div class="container wow fadeIn">
 			<div class="text-center bg-inverse-t50">
-				<h4 ng-if="!$ctrl.someoneContact">
+				<h4 ng-if="!$ctrl.someoneContact" ng-hide="$ctrl.userClickedNo">
 					Would you like a real person to call you to make all of this much easier by doing this calculating
-				    for you?</h4>
+					for you?</h4>
 				<p ng-if="$ctrl.someoneContact">{{ $ctrl.someoneContact }}</p>
+				<p ng-if="$ctrl.pmgError">{{ $ctrl.pmgError }}</p>
 			</div>
 			<div ng-if="$ctrl.realPerson" class="row">
-					<!-- Button 1 -->
-					<div class="col-md-4 offset-md-2">
-						<div class="pricing-item featured-first">
-							<div class="price">
-								<h1>
-									<button ng-click="$ctrl.yesClick()"><i class="fa fa-check-circle fa-4x"></i>
-									</button>
-								</h1>
-							</div>
-							<hr class="colored">
-							<h4>
-								<a href="#" class="btn btn-secondary" ng-click="$ctrl.yesClick()"><strong>Yes</strong></a>
-							</h4>
+				<!-- Button 1 -->
+				<div class="col-md-4 offset-md-2">
+					<div class="pricing-item featured-first">
+						<div class="price">
+							<h1>
+								<button ng-click="$ctrl.yesClick()"><i class="fa fa-check-circle fa-4x"></i>
+								</button>
+							</h1>
 						</div>
+						<hr class="colored">
+						<h4>
+							<a href="#" class="btn btn-secondary" ng-click="$ctrl.yesClick()"><strong>Yes</strong></a>
+						</h4>
 					</div>
-					<!-- Button 2 -->
-					<div class="col-md-4">
-						<div class="pricing-item featured-first">
-							<div class="price">
-								<h1>
-									<button ng-click="$ctrl.noClick()"><i class="fa fa-close fa-4x"></i></button>
-								</h1>
-							</div>
-							<hr class="colored">
-							<h4><a href="#" class="btn btn-secondary" ng-click="$ctrl.noClick()"><strong>No</strong></a>
-							</h4>
+				</div>
+				<!-- Button 2 -->
+				<div class="col-md-4">
+					<div class="pricing-item featured-first">
+						<div class="price">
+							<h1>
+								<button ng-click="$ctrl.noClick()"><i class="fa fa-close fa-4x"></i></button>
+							</h1>
 						</div>
+						<hr class="colored">
+						<h4><a href="#" class="btn btn-secondary" ng-click="$ctrl.noClick()"><strong>No</strong></a>
+						</h4>
 					</div>
+				</div>
 			</div>
 			<!-- Form to collect email and number -->
 			<div ng-if="!$ctrl.realPerson && !$ctrl.someoneContact">
 				<br><br>
-				<form class="form-inline" ng-submit="$ctrl.btnClick()">
-					<label class="sr-only" for="email">Email</label>
-					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
-						<div class="input-group-addon">@</div>
-						<input type="email" class="form-control mb-2 mr-sm-2 mb-sm-0" id="email"
-						      ng-model="$ctrl.activeSlide.intro.email" placeholder="email">
+				<form id="contact-form" class="form-inline" ng-submit="$ctrl.btnClick()">
+					<div class="mx-auto" style="width: 60%;">
+						<label class="sr-only" for="email">Email</label>
+						<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+							<div class="input-group-addon">@</div>
+							<input type="email" class="form-control mb-2 mr-sm-2 mb-sm-0" id="email" required
+							       ng-model="$ctrl.activeSlide.intro.email" placeholder="email">
+						</div>
+						<br>
+						<label class="sr-only" for="number">Number</label>
+						<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+							<div class="input-group-addon">#</div>
+							<input type="tel" class="form-control mb-2 mr-sm-2 mb-sm-0" id="number" required
+							       ng-model="$ctrl.activeSlide.intro.phoneNumber" placeholder="Phone Number">
+						</div>
+						<br>
+						<button type="submit" class="btn btn-success">Continue</button>
 					</div>
-					
-					<label class="sr-only" for="number">Number</label>
-					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
-						<div class="input-group-addon">#</div>
-						<input type="tel" class="form-control" id="number"
-						      ng-model="$ctrl.activeSlide.intro.phoneNumber" placeholder="Phone Number">
-					</div>
-					
-					<button type="submit" class="btn btn-success">Contact Me</button>
 				</form>
 			</div>
+			<h1 id="ajax-response" class="bg-inverse-t50"></h1>
 		</div>
 	</div>
 	

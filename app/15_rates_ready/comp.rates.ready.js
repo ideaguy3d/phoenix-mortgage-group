@@ -20,6 +20,8 @@
         vm.status = "This is working ^_^/ from [ "+file+" ]";
 
         vm.btnClick = function () {
+            //-- SEND THE EMAIL:
+
             // send user to pmg login page
             console.log("should send user to pmg login page.");
             location.assign("https://phoenixmortgagegroup.mortgage-application.net/MyAccount/AccountLogin.aspx");

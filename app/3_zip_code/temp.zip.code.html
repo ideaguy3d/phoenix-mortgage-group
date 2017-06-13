@@ -6,11 +6,16 @@
 			<h2>What is your zip code?</h2>
 		</div>
 		<form class="form-group row" ng-submit="$ctrl.btnClick()">
-			<label for="zipcode" class="col-2 col-form-label">Zip Code</label>
-			<div class="col-10">
-				<input class="form-control" type="number" value="12345" id="zipcode">
+			<div class="mx-auto" style="width: 60%;">
+				<label class="sr-only" for="number">Number</label>
+				<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+					<div class="input-group-addon">#</div>
+					<input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="number" required
+					       ng-model="$ctrl.activeSlide.zipCode.zip" placeholder="zip code">
+				</div>
+				<br>
+				<button type="submit" class="btn btn-success">Continue</button>
 			</div>
-			<button type="submit">Submit</button>
 		</form>
 	</div>
 </div>

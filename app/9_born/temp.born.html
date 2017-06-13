@@ -6,36 +6,32 @@
 		<!-- input forms begin -->
 		<div class="row mt-4">
 			<div class="col-lg-8 offset-lg-2">
-				<form ng-submit="$ctrl.btnClick()">
-					<div class="form-group">
-						<label for="day" class="lead">Day</label>
-						<select class="form-control" id="day">
-							<option>Refinance</option>
-							<option>Home Purchase</option>
-							<option>Home Equity Loan</option>
-						</select>
+				<form id="contact-form" class="form-inline" ng-submit="$ctrl.btnClick()">
+					<div class="mx-auto" style="width: 60%;">
+						
+						<label class="sr-only" for="month">Month</label>
+						<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+							<div class="input-group-addon">Month</div>
+							<input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="month" required
+							       ng-model="$ctrl.activeSlide.born.month" placeholder="e.g. 1-12">
+						</div>
+						<br>
+						<label class="sr-only" for="day">Day</label>
+						<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+							<div class="input-group-addon">Day</div>
+							<input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="day" required
+							       ng-model="$ctrl.activeSlide.born.day" placeholder="e.g. 1-31">
+						</div>
+						<br>
+						<label class="sr-only" for="year">Year</label>
+						<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+							<div class="input-group-addon">Year</div>
+							<input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="year" required
+							       ng-model="$ctrl.activeSlide.born.year" placeholder="e.g. 1917-2017">
+						</div>
+						<br>
+						<button type="submit" class="btn btn-success">Continue</button>
 					</div>
-					<div class="form-group">
-						<label for="exampleSelect3" class="lead">Month</label>
-						<select class="form-control" id="exampleSelect3">
-							<option>Single family home</option>
-							<option>Townhome</option>
-							<option>Condo</option>
-							<option>Multi Family Dwelling</option>
-							<option>Mobile/Manufactured home</option>
-						</select>
-					</div>
-					<div class="form-group lead">
-						<label for="exampleSelect4" class="lead">Year</label>
-						<select class="form-control" id="exampleSelect4">
-							<option>Refinance</option>
-							<option>Home Purchase</option>
-							<option>Home Equity Loan</option>
-						</select>
-					</div>
-					<button type="submit" class="btn jbtn jbtn-primary">
-						Continue
-					</button>
 				</form>
 			</div>
 		</div>
