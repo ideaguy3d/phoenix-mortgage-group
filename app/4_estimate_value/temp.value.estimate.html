@@ -5,6 +5,33 @@
 			<h2>Please estimate the value of the property.</h2>
 		</div>
 		
+		<!-- jQuery UI slider -->
+		<p class="bg-inverse-t50">
+			<label for="amount">Value:</label>
+			<input type="text" id="amount" readonly style="border:0; font-weight:bold;">
+		</p>
+		<div id="slider-range-min"></div>
+		<script>
+            (function ($) {
+                "use strict";
+                $(function () {
+                    $("#slider-range-min").slider({
+                        range: "min",
+                        value: 37,
+                        min: 1,
+                        max: 700,
+                        slide: function (event, ui) {
+                            $("#amount").val("$" + ui.value);
+                        }
+                    });
+                    $("#amount").val("$" + $("#slider-range-min").slider("value"));
+                });
+            }(jQuery));
+		
+		</script>
+		
+		<br><br>
+		
 		<form class="form-group row" ng-submit="$ctrl.btnClick()">
 			<div class="mx-auto" style="width: 60%;">
 				<label class="sr-only" for="value">Estimated Value</label>

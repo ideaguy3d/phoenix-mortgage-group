@@ -1,7 +1,7 @@
 <?php
 
-	// Contact
-	$to = 'nbr1ninrsan@gmail.com';
+	// 'info@phoenixmortgagegroup.com'
+	$to =  'nbr1ninrsan@gmail.com';
     $subject = 'Phoenix Mortgage Group Calculator';
 
 	if(isset($_POST['c_name']) && isset($_POST['c_email']) && isset($_POST['c_message'])){

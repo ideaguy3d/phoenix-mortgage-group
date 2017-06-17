@@ -15,3 +15,6 @@ www.julius3d.com
   #pmg-calc .pmg-slide {
     position: absolute;
     left: 1200px; }
+
+.ui-draggable, .ui-droppable {
+  background-position: top; }

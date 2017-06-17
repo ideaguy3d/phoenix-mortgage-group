@@ -25,6 +25,9 @@
                 email: '',
                 phoneNumber: ''
             },
+            intro2: {
+
+            },
             propertyUsed: {
                 active: false,
                 qState: 'unanswered',
@@ -109,14 +112,19 @@
                 qState: 'unanswered'
             }
         };
+
         // make a copy of the data
         pmgDataModel = $scope.activeSlide;
 
-        $window.onbeforeunload = function(e){
-            var text = "Thanks for visiting.";
-            pmgUtilityService.sendEmail();
-            e.returnValue = null;
-            return null;
+        var closeCondition = false;
+        if (closeCondition) {
+            console.log("in onbeforeunload event... and I shouldn't be");
+            $window.onbeforeunload = function (e) {
+                var text = "Thanks for visiting.";
+                pmgUtilityService.sendEmail();
+                e.returnValue = null;
+                return null;
+            }
         }
     }
 

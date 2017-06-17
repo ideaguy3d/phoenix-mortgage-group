@@ -23,6 +23,7 @@
 	<link href="vendor/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css">
 	<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
 	<link href="vendor/animate.css/animate.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	
 	<!-- Custom CSS -->
 	<link href="app/phoenixmortgagegroup.css" rel="stylesheet" type="text/css">
@@ -64,6 +65,14 @@
 							'answered': activeSlide.intro.qState === 'answered'
 						 }">
 					<intro active-slide="activeSlide"></intro>
+				</section>
+				<!-- 1b) intro slide -->
+				<section class="pmg-slide"
+				         ng-class="{
+							'active': activeSlide.intro2.active, 'inactive': !activeSlide.intro2.active,
+							'answered': activeSlide.intro2.qState === 'answered'
+						 }">
+					<intro2 active-slide="activeSlide"></intro2>
 				</section>
 				<!-- 2) property used slide -->
 				<section class="pmg-slide"
@@ -223,15 +232,16 @@
 
 <!-- Vendor JavaScript -->
 <script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/angular/angular.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="vendor/tether/tether.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="vendor/jquery.easing/jquery.easing.min.js"></script>
-<script src="vendor/owl-carousel/owl.carousel.js"></script>
-<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-<script src="vendor/vide/jquery.vide.min.js"></script>
-<script src="vendor/mixitup/mixitup.min.js"></script>
-<script src="vendor/wowjs/wow.min.js"></script>
+<script src="vendor/angular/angular.min.js"></script>
+<!--<script src="vendor/jquery.easing/jquery.easing.min.js"></script>-->
+<!--<script src="vendor/owl-carousel/owl.carousel.js"></script>-->
+<!--<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>-->
+<!--<script src="vendor/vide/jquery.vide.min.js"></script>-->
+<!--<script src="vendor/mixitup/mixitup.min.js"></script>-->
+<!--<script src="vendor/wowjs/wow.min.js"></script>-->
 
 <!--<script type="text/javascript">new WOW.init();</script>-->
 
@@ -241,6 +251,7 @@
 <script src="app/9_born/comp.born.js"></script>
 <script src="app/8_credit_score/comp.credit.score.js"></script>
 <script src="app/1_intro/comp.intro.js"></script>
+<script src="app/1b_intro/comp.intro2.js"></script>
 <script src="app/5_remaining_balance_1st/comp.remaining.balance1.js"></script>
 <script src="app/7a_remaining_balance_2nd/comp.remaining.balance2.js"></script>
 <script src="app/6_second_mortgage/comp.second.mortgage.js"></script>

@@ -33,6 +33,14 @@
             return pattern.test(emailAddress);
         }
 
+        vm.nameSubmit = function () {
+            vm.nameForm = !vm.nameForm;
+            var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
+            vm.activeSlide[activeKey].active = false;
+            vm.activeSlide[activeKey].qState = 'answered';
+            vm.activeSlide.estimateValue.active = true;
+        };
+
         vm.yesClick = function () {
             vm.endSlide = true;
             vm.realPerson = !vm.realPerson;
@@ -44,12 +52,12 @@
             vm.realPerson = !vm.realPerson;
         };
 
+        // email gets sent here:
         vm.btnClick = function () {
             var c_name = vm.activeSlide.intro.username;
             var c_email = vm.activeSlide.intro.email;
             // this is the all important Data !!
             var c_message = pmgData();
-            console.log(c_message);
 
             if (!vm.endSlide) {
                 var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
@@ -101,10 +109,6 @@
                     }
                 });
             }
-        };
-
-        vm.nameSubmit = function () {
-            vm.nameForm = !vm.nameForm;
         };
     }
 }());

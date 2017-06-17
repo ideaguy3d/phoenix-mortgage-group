@@ -25,9 +25,5 @@
             vm.activeSlide[activeKey].qState = 'answered';
             vm.activeSlide.estimateValue.active = true;
         };
-
-        vm.$onInit = function(){
-            console.log("jha - "+file+" Successfully initialized ^_^/");
-        };
     }
 }());
