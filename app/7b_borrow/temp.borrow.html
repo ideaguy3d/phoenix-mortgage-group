@@ -1,18 +1,20 @@
 <section class="page-section pricing bg-t100" id="pricing">
 	<div class="container wow fadeIn">
 		<div class="text-center bg-inverse-t50">
-			<h2>{{ $ctrl.activeSlide.intro.username }} you've completed 50%. Would you like to borrow additional cash?</h2>
+			<h2>Would You Like To Borrow Additional Funds Above The Purchase Price Of Your Home?</h2>
 		</div>
 		
 		<form class="form-group row" ng-submit="$ctrl.yesClick()">
 			<div class="mx-auto" style="width: 60%;">
-				<label class="sr-only" for="number">Amount to borrow</label>
+				<label class="sr-only" for="amount2borrow">Amount to borrow</label>
 				<div class="input-group mb-2 mr-sm-2 mb-sm-0">
 					<div class="input-group-addon">$</div>
-					<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="number" required
+					<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="amount2borrow" required
 					       ng-model="$ctrl.activeSlide.borrow.amount"
 					       placeholder="$0 (no cash) to $85,000">
 				</div>
+				<br>
+				<div id="slider-amount2borrow"></div>
 				<br>
 				<button type="submit" class="btn btn-success">Continue</button>
 			</div>

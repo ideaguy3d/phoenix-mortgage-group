@@ -15,9 +15,7 @@
     });
 
     function CompCtrlClass(pmgUtilityService) {
-        var vm = this, file = 'comp.zip.code.js';
-
-        vm.status = "This is working ^_^/ from [ "+file+" ]";
+        var vm = this;
 
         vm.btnClick = function () {
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);

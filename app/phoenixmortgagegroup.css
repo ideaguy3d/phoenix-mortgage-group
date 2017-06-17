@@ -27,6 +27,10 @@ section.page-section {
     padding: 100px 0;
 }
 
+section.page-section-p50 {
+    padding: 50px 0;
+}
+
 @media (max-width: 767px) {
     section.page-section {
         padding: 75px 0;
@@ -833,6 +837,10 @@ header.video .scroll-down {
     border-radius: 0;
 }
 
+input.form-control {
+    font-size: 1.8rem;
+}
+
 .jbtn-primary {
     border: 0;
     border-radius: 0;
@@ -1030,4 +1038,14 @@ a.text-primary:hover, a.text-primary:focus {
 .lead {
     font-size: 1.25rem;
     font-weight: 600;
+}
+
+/* overwriting jQuery UI slider rules */
+.ui-slider .ui-slider-handle {
+    width: 2.0rem;
+    height: 2.0rem;
+}
+
+.ui-slider-horizontal {
+    height: 1.5rem;
 }

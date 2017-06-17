@@ -15,15 +15,14 @@
     });
 
     function CompCtrlClass(pmgUtilityService) {
-        var vm = this, file = 'comp.second.mortgage.js';
+        var vm = this;
 
-        vm.status = "This is working ^_^/ from [ "+file+" ]";
         vm.yesClick = function () {
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
             vm.activeSlide.secondMortgage.answer = 'yes';
-            vm.activeSlide.remainingBalance2.active = true;
+            vm.activeSlide.borrow.active = true;
         };
 
         vm.noClick = function () {
@@ -34,10 +33,6 @@
             // requires special logic
             vm.activeSlide.secondMortgage.answer = 'no';
             vm.activeSlide.borrow.active = true;
-        };
-
-        vm.$onInit = function(){
-            console.log("jha - "+file+" Successfully initialized ^_^/");
         };
     }
 }());

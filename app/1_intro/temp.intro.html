@@ -8,7 +8,7 @@
 				<label class="sr-only" for="inlineFormInput">Name</label>
 				<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput"
 				       ng-model="$ctrl.activeSlide.intro.username" placeholder="Your Name">
-				<button type="submit" class="btn btn-success">Enter</button>
+				<button type="submit" class="btn btn-lg btn-success">Enter</button>
 			</div>
 		</form>
 		<h2 ng-if="!$ctrl.nameForm">Hello {{ $ctrl.activeSlide.intro.username }} <i class="fa fa-"></i></h2>
@@ -34,53 +34,40 @@
 			}(jQuery));
 		</script>
 	</div>
-</div>
-
-
-<!-- input forms begin
+	
+	<!-- input forms begin -->
 	<div class="row mt-4">
 		<div class="col-lg-8 offset-lg-2">
 			<form ng-submit="$ctrl.btnClick()">
+				<!-- Type of property question -->
 				<div class="form-group">
-					<label for="exampleSelect1" class="lead">Type of property</label>
-					<select class="form-control" id="exampleSelect1">
-						<option>Single family home</option>
-						<option>Townhome</option>
-						<option>Condo</option>
-						<option>Multi Family Dwelling</option>
-						<option>Mobile/Manufactured home</option>
+					<label for="propertyType" class="lead">Type of property</label>
+					<select class="form-control" id="propertyType" ng-model="$ctrl.activeSlide.intro.propertyType">
+						<option value="singleFamily">Single family home</option>
+						<option value="town">Town Home</option>
+						<option value="condo">Condo</option>
+						<option value="multiFamilyDwelling">Multi Family Dwelling</option>
+						<option value="mobile">Mobile/Manufactured home</option>
 					</select>
 				</div>
+				<!-- Type of loan question -->
 				<div class="form-group">
-					<label for="exampleSelect2" class="lead">Type of loan?</label>
-					<select class="form-control" id="exampleSelect2">
-						<option>Refinance</option>
-						<option>Home Purchase</option>
-						<option>Home Equity Loan</option>
+					<label for="loanType" class="lead">Type of loan?</label>
+					<select class="form-control" id="loanType" ng-model="$ctrl.activeSlide.intro.loanType">
+						<option value="refinance">Refinance</option>
+						<option value="homePurchase">Home Purchase</option>
+						<option value="homeEquityLoan">Home Equity Loan</option>
 					</select>
 				</div>
-				<div class="form-group">
-					<label for="exampleSelect3" class="lead">Type of property</label>
-					<select class="form-control" id="exampleSelect3">
-						<option>Single family home</option>
-						<option>Townhome</option>
-						<option>Condo</option>
-						<option>Multi Family Dwelling</option>
-						<option>Mobile/Manufactured home</option>
-					</select>
-				</div>
-				<div class="form-group lead">
-					<label for="exampleSelect4" class="lead">Type of loan?</label>
-					<select class="form-control" id="exampleSelect4">
-						<option>Refinance</option>
-						<option>Home Purchase</option>
-						<option>Home Equity Loan</option>
-					</select>
-				</div>
+				
 				<button type="submit" class="btn jbtn jbtn-primary">
 					See Your Results
 				</button>
 			</form>
 		</div>
 	</div>
-	-->
+</div>
+
+
+
+	

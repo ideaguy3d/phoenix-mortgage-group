@@ -1,7 +1,12 @@
+
+<div class="container text-center">
+	<br>
+	<h3>At Phoenix Mortgage We Understand That Purchasing A Home Can Be A Stressful Time. We Want To Help Get Rid Of The
+	    Hassle, So You Can Enjoy The View.</h3>
+</div>
 <!-- "Want someone to contact you?" section -->
-<div class="page-section pricing bg-t100" id="pricing">
+<section class="page-section-p50 pricing bg-t100" id="pricing">
 	<div class="container wow fadeIn">
-		
 		<!-- inner facet 3a top -->
 		<div class="text-center bg-inverse-t50">
 			<h4 ng-if="!$ctrl.someoneContact" ng-hide="$ctrl.userClickedNo">
@@ -13,12 +18,13 @@
 		
 		<!-- inner facet 3a bottom -->
 		<div ng-if="$ctrl.realPerson" class="row">
-			<!-- Button 1 -->
+			<!-- Button Yes -->
 			<div class="col-md-4 offset-md-2">
 				<div class="pricing-item featured-first">
 					<div class="price">
 						<h1>
-							<button ng-click="$ctrl.yesClick()"><i class="fa fa-check-circle fa-4x"></i>
+							<button ng-click="$ctrl.yesClick()">
+								<i class="fa fa-check-circle fa-4x" style="color: green"></i>
 							</button>
 						</h1>
 					</div>
@@ -28,12 +34,13 @@
 					</h4>
 				</div>
 			</div>
-			<!-- Button 2 -->
+			<!-- Button No -->
 			<div class="col-md-4">
 				<div class="pricing-item featured-first">
 					<div class="price">
 						<h1>
-							<button ng-click="$ctrl.noClick()"><i class="fa fa-close fa-4x"></i></button>
+							<button ng-click="$ctrl.noClick()">
+								<i class="fa fa-close fa-4x" style="color: red"></i></button>
 						</h1>
 					</div>
 					<hr class="colored">
@@ -52,14 +59,14 @@
 					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
 						<div class="input-group-addon">@</div>
 						<input type="email" class="form-control mb-2 mr-sm-2 mb-sm-0" id="email" required
-						       ng-model="$ctrl.activeSlide.intro.email" placeholder="email">
+						       ng-model="$ctrl.activeSlide.intro2.email" placeholder="email">
 					</div>
 					<br>
 					<label class="sr-only" for="number">Number</label>
 					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
 						<div class="input-group-addon">#</div>
 						<input type="tel" class="form-control mb-2 mr-sm-2 mb-sm-0" id="number" required
-						       ng-model="$ctrl.activeSlide.intro.phoneNumber" placeholder="Phone Number">
+						       ng-model="$ctrl.activeSlide.intro2.phoneNumber" placeholder="Phone Number">
 					</div>
 					<br>
 					<button type="submit" class="btn btn-success">Continue</button>
@@ -67,6 +74,6 @@
 			</form>
 		</div>
 		<!-- jQuery element for ajax response area -->
-		<h1 id="ajax-response" class="bg-inverse-t50"></h1>
+		<h1 id="ajax-response" class="bg-inverse-t50 text-center"></h1>
 	</div>
-</div>
+</section>

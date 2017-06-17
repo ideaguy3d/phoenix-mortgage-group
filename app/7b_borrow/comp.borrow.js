@@ -16,19 +16,16 @@
     });
 
     function CompCtrlClass (pmgUtilityService) {
-        var vm = this, file = 'comp.borrow.js';
-
-        vm.status = "This is working ^_^/ from [ "+file+" ]";
+        var vm = this;
 
         vm.yesClick = function () {
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             console.log(activeKey+" = activeKey");
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-
-            // requires special logic
             vm.activeSlide.borrow.answer = 'yes';
             vm.activeSlide.creditScore.active = true;
+            console.log("vm.activeSlide.borrow.amount = "+vm.activeSlide.borrow.amount);
         };
 
         vm.noClick = function () {
@@ -42,8 +39,20 @@
             vm.activeSlide.creditScore.active = true;
         };
 
+        // this updates the data model and view model for the draggable slider
         vm.$onInit = function(){
-            console.log("jha - "+file+" Successfully initialized ^_^/");
+            angular.element("#slider-amount2borrow").slider({
+                range: "min",
+                value: 500000,
+                min: 0,
+                max: 80000,
+                slide: function (event, ui) {
+                    angular.element("#amount2borrow").val(ui.value + " dollars");
+                    vm.activeSlide.borrow.amount = ui.value;
+                }
+            });
+            angular.element("#amount2borrow").val(angular.element("#slider-range-min")
+                    .slider("value") + " dollars");
         };
     }
 }());

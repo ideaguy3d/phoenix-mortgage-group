@@ -16,19 +16,13 @@
     });
 
     function CompCtrlClass(pmgUtilityService) {
-        var vm = this, file = 'comp.remaining.balance1.js';
-
-        vm.status = "This is working ^_^/ from [ "+file+" ]";
+        var vm = this;
 
         vm.btnClick = function () {
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
             vm.activeSlide.secondMortgage.active = true;
-        };
-
-        vm.$onInit = function(){
-            console.log("jha - "+file+" Successfully initialized ^_^/");
         };
     }
 }());

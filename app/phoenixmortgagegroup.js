@@ -21,12 +21,13 @@
             intro: {
                 active: true,
                 qState: 'unanswered',
-                username: '',
-                email: '',
-                phoneNumber: ''
+                username: 'Julius',
+                loanType: 'refinance',
+                propertyType: 'singleFamily'
             },
             intro2: {
-
+                email: 'julius@gmail.com',
+                phoneNumber: '2092838080'
             },
             propertyUsed: {
                 active: false,
@@ -36,7 +37,7 @@
             zipCode: {
                 active: false,
                 qState: 'unanswered',
-                zip: ''
+                zip: 93330
             },
             estimateValue: {
                 active: false,
@@ -148,8 +149,10 @@
 
         var collectEmailData = function () {
             var name = "Name: " + pmgDataModel.intro.username + bar;
-            var email = "Email: " + pmgDataModel.intro.email + bar;
-            var phoneNumber = "Phone Number:" + pmgDataModel.intro.phoneNumber + bar;
+            var propertyType = "property type: " + vm.activeSlide.intro.propertyType + " \n ";
+            var loanType = "loan type: " + vm.activeSlide.intro.loanType + " \n ";
+            var email = "Email: " + pmgDataModel.intro2.email + bar;
+            var phoneNumber = "Phone Number:" + pmgDataModel.intro2.phoneNumber + bar;
             var propertyUsedFor = "Property will be used for: " + pmgDataModel.propertyUsed.propertyUsedFor + bar;
             var zipCode = "Zip code: " + pmgDataModel.zipCode.zip + bar;
             var mortgage_1st = "1st mortgage estimated value: " + pmgDataModel.estimateValue.value
@@ -167,7 +170,7 @@
             var foreclosure = "Foreclosure: " + pmgDataModel.bankruptcyQuestion.foreclosure
                 + " from " + pmgDataModel.foreclosure.yearsAgo + " years ago" + bar;
             var address = "Address: " + pmgDataModel.currentAddress.location;
-            return name + email + phoneNumber + propertyUsedFor + zipCode + mortgage_1st + mortgage_2nd + wants2borrow
+            return name + email + phoneNumber + propertyType + loanType + propertyUsedFor + zipCode + mortgage_1st + mortgage_2nd + wants2borrow
                 + credit + birthDate + priorMilitary + hasVaLoan + bankrupt + foreclosure + address;
         };
 

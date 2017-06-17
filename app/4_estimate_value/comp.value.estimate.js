@@ -12,23 +12,33 @@
     app.component(componentId, {
         templateUrl: 'app/4_estimate_value/temp.value.estimate.html',
         bindings: { activeSlide: '=' },
-        controller: [ 'pmgUtilityService', CompCtrlClass ]
+        controller: [ '$scope', 'pmgUtilityService', CompCtrlClass ]
     });
 
-    function CompCtrlClass(pmgUtilityService) {
-        var vm = this, file = 'comp.value.estimate.js';
-
-        vm.status = "This is working ^_^/ from [ "+file+" ]";
+    function CompCtrlClass($scope, pmgUtilityService) {
+        var vm = this;
 
         vm.btnClick = function () {
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-            vm.activeSlide.remainingBalance1.active = true;
+            vm.activeSlide.secondMortgage.active = true;
         };
 
+        // this updates the data model and view model for the draggable slider
         vm.$onInit = function(){
-            console.log("jha - "+file+" Successfully initialized ^_^/");
+            angular.element("#slider-estimate-value").slider({
+                range: "min",
+                value: 500000,
+                min: 10000,
+                max: 2000000,
+                slide: function (event, ui) {
+                    angular.element("#amount").val(ui.value + " dollars");
+                    vm.activeSlide.estimateValue.value = ui.value;
+                }
+            });
+            angular.element("#amount").val(angular.element("#slider-range-min")
+                    .slider("value") + " dollars");
         };
     }
 }());

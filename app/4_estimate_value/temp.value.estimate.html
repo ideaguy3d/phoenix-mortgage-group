@@ -1,49 +1,40 @@
-<div class="page-section pricing bg-t100" id="pricing">
+
+<section class="page-section pricing bg-t100" id="pricing">
 	<div class="container wow fadeIn">
 		<br>
 		<div class="text-center bg-inverse-t50">
 			<h2>Please estimate the value of the property.</h2>
 		</div>
 		
-		<!-- jQuery UI slider -->
+		<!-- jQuery UI slider
 		<p class="bg-inverse-t50">
-			<label for="amount">Value:</label>
-			<input type="text" id="amount" readonly style="border:0; font-weight:bold;">
+			<label for="amount2">Value:</label>
+			<input type="text" id="amount2" readonly style="border:0; font-weight:bold;">
 		</p>
-		<div id="slider-range-min"></div>
-		<script>
-            (function ($) {
-                "use strict";
-                $(function () {
-                    $("#slider-range-min").slider({
-                        range: "min",
-                        value: 37,
-                        min: 1,
-                        max: 700,
-                        slide: function (event, ui) {
-                            $("#amount").val("$" + ui.value);
-                        }
-                    });
-                    $("#amount").val("$" + $("#slider-range-min").slider("value"));
-                });
-            }(jQuery));
-		
-		</script>
-		
-		<br><br>
+		-->
+		<br>
 		
 		<form class="form-group row" ng-submit="$ctrl.btnClick()">
 			<div class="mx-auto" style="width: 60%;">
-				<label class="sr-only" for="value">Estimated Value</label>
+				<label class="sr-only" for="amount">Estimated Value</label>
 				<div class="input-group mb-2 mr-sm-2 mb-sm-0">
 					<div class="input-group-addon">$</div>
-					<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="value" required
+					<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="amount" required
 					       ng-model="$ctrl.activeSlide.estimateValue.value"
 					       placeholder="estimate from $60k to $2m+, use commas if you want">
 				</div>
+				<br>
+				<div id="slider-estimate-value"></div>
 				<br>
 				<button type="submit" class="btn btn-success">Continue</button>
 			</div>
 		</form>
 	</div>
-</div>
+</section>
+
+
+<!--
+ <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="value" required
+					       ng-model="$ctrl.activeSlide.estimateValue.value"
+					       placeholder="estimate from $60k to $2m+, use commas if you want">
+ -->
