@@ -149,8 +149,8 @@
 
         var collectEmailData = function () {
             var name = "Name: " + pmgDataModel.intro.username + bar;
-            var propertyType = "property type: " + vm.activeSlide.intro.propertyType + " \n ";
-            var loanType = "loan type: " + vm.activeSlide.intro.loanType + " \n ";
+            var propertyType = "property type: " + pmgDataModel.intro.propertyType + bar;
+            var loanType = "loan type: " + pmgDataModel.intro.loanType + bar;
             var email = "Email: " + pmgDataModel.intro2.email + bar;
             var phoneNumber = "Phone Number:" + pmgDataModel.intro2.phoneNumber + bar;
             var propertyUsedFor = "Property will be used for: " + pmgDataModel.propertyUsed.propertyUsedFor + bar;
