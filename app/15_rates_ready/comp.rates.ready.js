@@ -15,9 +15,7 @@
     });
 
     function CompCtrlClass(pmgUtilityService, $location) {
-        var vm = this, file = 'comp.rates.ready.js';
-
-        vm.status = "This is working ^_^/ from [ "+file+" ]";
+        var vm = this;
 
         vm.btnClick = function () {
             // send user to pmg login page

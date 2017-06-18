@@ -5,14 +5,15 @@
 		</div>
 		<form id="contact-form" class="form-inline" ng-submit="$ctrl.btnClick()">
 			<div class="mx-auto" style="width: 60%;">
-				<label class="sr-only" for="yearsAgo">Years Ago</label>
+				<label class="sr-only" for="foreYearsAgo">Years Ago</label>
 				<div class="input-group mb-2 mr-sm-2 mb-sm-0">
 					<div class="input-group-addon"><i class="fa fa-hourglass"></i></div>
-					<input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="yearsAgo" required
+					<input type="number" class="form-control mb-2 mr-sm-2 mb-sm-0" id="foreYearsAgo" required
 					       ng-model="$ctrl.activeSlide.foreclosure.yearsAgo" placeholder="e.g. 1-7">
 				</div>
 				<br>
-				
+				<div id="slider-foreclosure"></div>
+				<br>
 				<button type="submit" class="btn btn-success">Continue</button>
 			</div>
 		</form>

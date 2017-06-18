@@ -30,8 +30,20 @@
             }
         };
 
+        // this updates the data model and view model for the draggable slider
         vm.$onInit = function(){
-            console.log("jha - "+file+" Successfully initialized ^_^/");
+            angular.element("#slider-bankruptcy").slider({
+                range: "min",
+                value: 3,
+                min: 1,
+                max: 7,
+                slide: function (event, ui) {
+                    angular.element("#bankYearsAgo").val(ui.value);
+                    vm.activeSlide.bankruptcy.yearsAgo = ui.value;
+                }
+            });
+            angular.element("#bankYearsAgo").val(angular.element("#slider-range-min")
+                    .slider("value") + " years");
         };
     }
 }());

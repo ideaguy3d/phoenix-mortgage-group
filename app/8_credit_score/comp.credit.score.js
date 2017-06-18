@@ -25,7 +25,7 @@
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
             vm.activeSlide.creditScore.creditEstimate = 'excellent(more than 720)';
-            vm.activeSlide.born.active = true;
+            vm.activeSlide.military.active = true;
         };
 
         vm.goodClick = function(){
@@ -33,7 +33,7 @@
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
             vm.activeSlide.creditScore.creditEstimate = 'good(680 to 719)';
-            vm.activeSlide.born.active = true;
+            vm.activeSlide.military.active = true;
         };
 
         vm.fairClick = function(){
@@ -41,7 +41,7 @@
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
             vm.activeSlide.creditScore.creditEstimate = 'fair(640 to 679)';
-            vm.activeSlide.born.active = true;
+            vm.activeSlide.military.active = true;
         };
 
         vm.poorClick = function(){
@@ -49,7 +49,7 @@
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
             vm.activeSlide.creditScore.creditEstimate = 'poor(less than 639)';
-            vm.activeSlide.born.active = true;
+            vm.activeSlide.military.active = true;
         };
     }
 }());

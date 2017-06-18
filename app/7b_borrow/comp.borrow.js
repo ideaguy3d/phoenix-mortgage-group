@@ -43,9 +43,10 @@
         vm.$onInit = function(){
             angular.element("#slider-amount2borrow").slider({
                 range: "min",
-                value: 500000,
+                value: 42500,
                 min: 0,
-                max: 80000,
+                max: 85000,
+                step: 5000,
                 slide: function (event, ui) {
                     angular.element("#amount2borrow").val(ui.value + " dollars");
                     vm.activeSlide.borrow.amount = ui.value;

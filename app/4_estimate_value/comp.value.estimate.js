@@ -32,6 +32,7 @@
                 value: 500000,
                 min: 10000,
                 max: 2000000,
+                step: 10000,
                 slide: function (event, ui) {
                     angular.element("#amount").val(ui.value + " dollars");
                     vm.activeSlide.estimateValue.value = ui.value;
