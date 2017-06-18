@@ -49,7 +49,7 @@
                 step: 5000,
                 slide: function (event, ui) {
                     angular.element("#amount2borrow").val(ui.value + " dollars");
-                    vm.activeSlide.borrow.amount = ui.value;
+                    vm.activeSlide.borrow.amount = "$"+ui.value;
                 }
             });
             angular.element("#amount2borrow").val(angular.element("#slider-range-min")

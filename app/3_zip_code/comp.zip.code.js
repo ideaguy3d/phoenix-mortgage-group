@@ -10,7 +10,7 @@
 
     app.component(componentId, {
         templateUrl: 'app/3_zip_code/temp.zip.code.html',
-        bindings: {activeSlide: '='},
+        bindings: { activeSlide: '=' },
         controller: ['pmgUtilityService', CompCtrlClass]
     });
 

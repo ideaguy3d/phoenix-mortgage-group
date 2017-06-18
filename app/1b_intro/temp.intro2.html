@@ -5,13 +5,13 @@
 	    Hassle, So You Can Enjoy The View.</h3>
 </div>
 <!-- "Want someone to contact you?" section -->
-<section class="page-section-p50 pricing bg-t100" id="pricing">
+<section class="page-section-p50 pricing bg-t100">
 	<div class="container wow fadeIn">
 		<!-- inner facet 3a top -->
 		<div class="text-center bg-inverse-t50">
 			<h4 ng-if="!$ctrl.someoneContact" ng-hide="$ctrl.userClickedNo">
 				Would you like a real person to call you to make all of this much easier by doing this calculating
-				for you?</h4>
+				for you? </h4>
 			<p ng-if="$ctrl.someoneContact">{{ $ctrl.someoneContact }}</p>
 			<p ng-if="$ctrl.pmgError">{{ $ctrl.pmgError }}</p>
 		</div>

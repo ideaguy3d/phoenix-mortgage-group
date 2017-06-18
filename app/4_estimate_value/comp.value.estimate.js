@@ -35,7 +35,7 @@
                 step: 10000,
                 slide: function (event, ui) {
                     angular.element("#amount").val(ui.value + " dollars");
-                    vm.activeSlide.estimateValue.value = ui.value;
+                    vm.activeSlide.estimateValue.value = "$"+ui.value;
                 }
             });
             angular.element("#amount").val(angular.element("#slider-range-min")

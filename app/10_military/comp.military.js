@@ -15,9 +15,7 @@
     });
 
     function CompCtrlClass(pmgUtilityService) {
-        var vm = this, file = 'comp.military.js';
-
-        vm.status = "This is working ^_^/ from [ "+file+" ]";
+        var vm = this;
 
         vm.yesClick = function () {
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
@@ -35,10 +33,6 @@
             vm.activeSlide[activeKey].qState = 'answered';
             vm.activeSlide.military.priorMilitary = false;
             vm.activeSlide.bankruptcyQuestion.active = true;
-        };
-
-        vm.$onInit = function(){
-            console.log("jha - "+file+" Successfully initialized ^_^/");
         };
     }
 }());

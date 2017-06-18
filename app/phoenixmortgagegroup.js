@@ -91,12 +91,12 @@
                 active: false,
                 qState: 'unanswered',
                 bankruptcy: '',
-                foreclosure: ''
+                foreclosure: 0
             },
             bankruptcy: {
                 active: false,
                 qState: 'unanswered',
-                yearsAgo: ''
+                yearsAgo: 0
             },
             foreclosure: {
                 active: false,
@@ -175,12 +175,12 @@
         };
 
         var sendEmail = function () {
-            var c_email = pmgDataModel.intro.email;
+            var c_email = pmgDataModel.intro2.email;
             var c_name = pmgDataModel.intro.name || 'user did not provide name';
             var c_message = collectEmailData();
             var emailCheck = typeof c_email === "string";
             var messageCheck = typeof c_email === "string";
-            var validationCheck = (!emailCheck || !messageCheck) || (!isValidEmailAddress(c_email) );
+            var validationCheck = (!emailCheck || !messageCheck) || !isValidEmailAddress(c_email);
             if (validationCheck) {
                 console.error("Email data did not pass validation check.");
             }

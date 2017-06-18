@@ -47,7 +47,7 @@
         // email gets sent here:
         vm.btnClick = function () {
             var c_name = vm.activeSlide.intro.username;
-            var c_email = vm.activeSlide.intro.email;
+            var c_email = vm.activeSlide.intro2.email;
             // this is the all important Data !!
             var c_message = pmgData();
 

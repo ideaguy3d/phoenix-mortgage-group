@@ -39,7 +39,8 @@
                 max: 7,
                 slide: function (event, ui) {
                     angular.element("#bankYearsAgo").val(ui.value);
-                    vm.activeSlide.bankruptcy.yearsAgo = ui.value;
+                    vm.activeSlide.bankruptcy.yearsAgo = ""+ui.value;
+                    console.log("typeof ui.value "+ typeof ui.value);
                 }
             });
             angular.element("#bankYearsAgo").val(angular.element("#slider-range-min")
