@@ -21,35 +21,30 @@
         vm.status = "This is working ^_^/ from [ "+file+" ]";
 
         vm.excellentClick = function(){
-            var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
-            vm.activeSlide[activeKey].active = false;
-            vm.activeSlide[activeKey].qState = 'answered';
             vm.activeSlide.creditScore.creditEstimate = 'excellent(more than 720)';
-            vm.activeSlide.military.active = true;
+            nextSlide();
         };
 
         vm.goodClick = function(){
-            var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
-            vm.activeSlide[activeKey].active = false;
-            vm.activeSlide[activeKey].qState = 'answered';
             vm.activeSlide.creditScore.creditEstimate = 'good(680 to 719)';
-            vm.activeSlide.military.active = true;
+            nextSlide();
         };
 
         vm.fairClick = function(){
-            var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
-            vm.activeSlide[activeKey].active = false;
-            vm.activeSlide[activeKey].qState = 'answered';
             vm.activeSlide.creditScore.creditEstimate = 'fair(640 to 679)';
-            vm.activeSlide.military.active = true;
+            nextSlide();
         };
 
         vm.poorClick = function(){
+            vm.activeSlide.creditScore.creditEstimate = 'poor(less than 639)';
+            nextSlide();
+        };
+
+        var nextSlide = function(){
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-            vm.activeSlide.creditScore.creditEstimate = 'poor(less than 639)';
-            vm.activeSlide.military.active = true;
+            vm.activeSlide.firstHomePurchase.active = true;
         };
     }
 }());

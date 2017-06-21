@@ -70,6 +70,11 @@
                 qState: 'unanswered',
                 creditEstimate: ''
             },
+            firstHomePurchase: {
+                active: false,
+                qState: 'unanswered',
+                answer: ''
+            },
             born: {
                 active: false,
                 qState: 'unanswered',
@@ -161,8 +166,7 @@
                 " with an estimated balance of " + pmgDataModel.remainingBalance2.balance + bar;
             var wants2borrow = "Wants to borrow: " + pmgDataModel.borrow.amount + bar;
             var credit = "Credit estimate: " + pmgDataModel.creditScore.creditEstimate + bar;
-            var birthDate = "Birthdate: " + pmgDataModel.born.month + "-" + pmgDataModel.born.day + "-"
-                + pmgDataModel.born.year + bar;
+            var firstHomePurchase = 'First Time Purchasing a home: '+pmgDataModel.firstHomePurchase.answer+bar;
             var priorMilitary = "Prior military: " + pmgDataModel.military.priorMilitary + bar;
             var hasVaLoan = "Has a va loan: " + pmgDataModel.vaLoan.hadVaLoan + bar;
             var bankrupt = "Bankrupt: " + pmgDataModel.bankruptcyQuestion.bankruptcy
@@ -171,7 +175,7 @@
                 + " from " + pmgDataModel.foreclosure.yearsAgo + " years ago" + bar;
             var address = "Address: " + pmgDataModel.currentAddress.location;
             return name + email + phoneNumber + propertyType + loanType + propertyUsedFor + zipCode + mortgage_1st + mortgage_2nd + wants2borrow
-                + credit + birthDate + priorMilitary + hasVaLoan + bankrupt + foreclosure + address;
+                + credit + firstHomePurchase + priorMilitary + hasVaLoan + bankrupt + foreclosure + address;
         };
 
         var sendEmail = function () {

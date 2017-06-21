@@ -2,7 +2,6 @@
  * Created by Julius Alvarado on 6/7/2017.
  */
 
-
 (function () {
     "use strict";
 
@@ -18,7 +17,17 @@
     function CompCtrlClass(pmgUtilityService) {
         var vm = this;
 
-        vm.btnClick = function () {
+        vm.yesClick = function () {
+            vm.activeSlide.firstHomePurchase.answer = 'yes';
+            nexSlide();
+        };
+
+        vm.noClick = function(){
+            vm.activeSlide.firstHomePurchase.answer = 'no';
+            nexSlide();
+        };
+
+        var nexSlide = function(){
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
