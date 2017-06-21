@@ -8,13 +8,24 @@ www.julius3d.com
   overflow: hidden; }
   #pmg-calc .active, #pmg-calc .inactive {
     transition: left 0.5s ease-in; }
+  #pmg-calc .active-top, #pmg-calc .inactive-top {
+    transition: top 0.4s linear; }
   #pmg-calc .active {
     left: 0 !important; }
+  #pmg-calc .active-top {
+    top: 0 !important; }
   #pmg-calc .inactive.answered {
     left: -1200px; }
   #pmg-calc .pmg-slide {
     position: absolute;
     left: 1200px; }
+  #pmg-calc #intro-slide {
+    left: 0;
+    top: -600px; }
+  #pmg-calc #intro-slide.inactive.answered {
+    top: -600px; }
+  #pmg-calc .btn.btn-sm.btn-info {
+    cursor: crosshair; }
 
 .ui-draggable, .ui-droppable {
   background-position: top; }

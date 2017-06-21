@@ -59,9 +59,10 @@
 			<!-------------------------------->
 			<div id="pmg-calc" class="container" ng-controller="CoreCtrl">
 				<!-- 1) intro slide -->
-				<section class="pmg-slide"
+				<section id="intro-slide" class="pmg-slide"
 				         ng-class="{
-							'active': activeSlide.intro.active, 'inactive': !activeSlide.intro.active,
+							'active-top': activeSlide.intro.active,
+							'inactive-top': !activeSlide.intro.active,
 							'answered': activeSlide.intro.qState === 'answered'
 						 }">
 					<intro active-slide="activeSlide"></intro>
