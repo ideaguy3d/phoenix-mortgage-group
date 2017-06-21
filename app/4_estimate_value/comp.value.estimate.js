@@ -22,7 +22,7 @@
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-            vm.activeSlide.secondMortgage.active = true;
+            vm.activeSlide.borrow.active = true;
         };
 
         // this updates the data model and view model for the draggable slider

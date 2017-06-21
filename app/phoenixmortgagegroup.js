@@ -18,16 +18,17 @@
 
     function CoreCtrlClass($scope, $window, pmgUtilityService) {
         $scope.activeSlide = {
+            closeWindowCondition: true,
             intro: {
                 active: true,
                 qState: 'unanswered',
-                username: 'Julius',
+                username: '',
                 loanType: 'refinance',
                 propertyType: 'singleFamily'
             },
             intro2: {
-                email: 'julius@gmail.com',
-                phoneNumber: '2092838080'
+                email: '',
+                phoneNumber: ''
             },
             propertyUsed: {
                 active: false,
@@ -37,7 +38,7 @@
             zipCode: {
                 active: false,
                 qState: 'unanswered',
-                zip: 93330
+                zip: 0
             },
             estimateValue: {
                 active: false,
@@ -122,9 +123,8 @@
         // make a copy of the data
         pmgDataModel = $scope.activeSlide;
 
-        var closeCondition = false;
+        var closeCondition = $scope.activeSlide.closeWindowCondition;
         if (closeCondition) {
-            console.log("in onbeforeunload event... and I shouldn't be");
             $window.onbeforeunload = function (e) {
                 var text = "Thanks for visiting.";
                 pmgUtilityService.sendEmail();

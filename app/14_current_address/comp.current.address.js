@@ -23,8 +23,6 @@
             vm.activeSlide[activeKey].qState = 'answered';
             pmgUtilityService.sendEmail();
             vm.activeSlide.ratesReady.active = true;
-            console.log("vm.activeSlide.bankruptcy.yearsAgo = "+vm.activeSlide.bankruptcy.yearsAgo);
-            console.log("vm.activeSlide.foreclosure.yearsAgo = "+vm.activeSlide.bankruptcy.yearsAgo);
         };
     }
 }());

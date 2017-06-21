@@ -38,8 +38,8 @@
                 min: 1,
                 max: 7,
                 slide: function (event, ui) {
-                    angular.element("#bankYearsAgo").val(ui.value);
-                    vm.activeSlide.bankruptcy.yearsAgo = ""+ui.value;
+                    angular.element("#bankYearsAgo").val(ui.value+"+");
+                    vm.activeSlide.bankruptcy.yearsAgo = ui.value+" years ago";
                 }
             });
             angular.element("#bankYearsAgo").val(angular.element("#slider-range-min")

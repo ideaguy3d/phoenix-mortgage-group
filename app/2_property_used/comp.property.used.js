@@ -21,31 +21,25 @@
         vm.status = "This is working ^_^/ from [ "+file+" ]";
 
         vm.primaryHome = function(){
-            var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
-            vm.activeSlide[activeKey].active = false;
-            vm.activeSlide[activeKey].qState = 'answered';
             vm.activeSlide.propertyUsed.propertyUsedFor = 'primary home';
-            vm.activeSlide.zipCode.active = true;
+            nextSlide();
         };
 
         vm.secondaryHome = function(){
-            var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
-            vm.activeSlide[activeKey].active = false;
-            vm.activeSlide[activeKey].qState = 'answered';
             vm.activeSlide.propertyUsed.propertyUsedFor = 'secondary home';
-            vm.activeSlide.zipCode.active = true;
+            nextSlide();
         };
 
         vm.rentalProperty = function(){
+            vm.activeSlide.propertyUsed.propertyUsedFor = 'rental property';
+            nextSlide();
+        };
+
+        var nextSlide = function(){
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-            vm.activeSlide.propertyUsed.propertyUsedFor = 'rental property';
-            vm.activeSlide.zipCode.active = true;
-        };
-
-        vm.$onInit = function(){
-            // console.log("jha - "+file+" Successfully initialized ^_^/");
+            vm.activeSlide.estimateValue.active = true;
         };
     }
 }());

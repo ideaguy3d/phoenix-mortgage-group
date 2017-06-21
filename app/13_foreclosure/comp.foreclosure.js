@@ -23,7 +23,10 @@
             var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
             vm.activeSlide[activeKey].active = false;
             vm.activeSlide[activeKey].qState = 'answered';
-            vm.activeSlide.currentAddress.active = true;
+            vm.activeSlide.ratesReady.active = true;
+            // send email
+            vm.activeSlide.closeWindowCondition = false;
+            pmgUtilityService.sendEmail();
         };
 
         // this updates the data model and view model for the draggable slider
@@ -34,8 +37,8 @@
                 min: 1,
                 max: 7,
                 slide: function (event, ui) {
-                    angular.element("#foreYearsAgo").val(ui.value);
-                    vm.activeSlide.foreclosure.yearsAgo = ui.value;
+                    angular.element("#foreYearsAgo").val(ui.value+"+");
+                    vm.activeSlide.foreclosure.yearsAgo = ui.value+" years ago";
                 }
             });
             angular.element("#foreYearsAgo").val(angular.element("#slider-range-min")
