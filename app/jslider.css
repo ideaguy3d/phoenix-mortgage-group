@@ -22,10 +22,12 @@ www.julius3d.com
   #pmg-calc #intro-slide {
     left: 0;
     top: -600px; }
-  #pmg-calc #intro-slide.inactive.answered {
-    top: -600px; }
+  #pmg-calc #intro-slide.inactive-top.answered {
+    top: -1000px; }
   #pmg-calc .btn.btn-sm.btn-info {
     cursor: crosshair; }
+  #pmg-calc .badge-primary {
+    background-color: #C2B49A; }
 
 .ui-draggable, .ui-droppable {
   background-position: top; }

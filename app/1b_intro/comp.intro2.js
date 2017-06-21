@@ -58,7 +58,8 @@
                 vm.activeSlide.propertyUsed.active = true;
                 return;
             }
-            vm.someoneContact = "Thanks "+vm.activeSlide.intro.username+", someone will contact you soon.";
+            vm.someoneContact = "Thanks "+vm.activeSlide.intro.username
+                +", A Representative Will Contact You Shortly.";
 
             /*----------------
               -- Send Email --

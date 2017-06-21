@@ -15,7 +15,7 @@
 		<br>
 		<h4>At Phoenix Mortgage We Understand That Purchasing A Home Can Be A Stressful Time. We Want To Help Get Rid Of
 		    The Hassle, So You Can Enjoy The View.</h4>
-		<hr class="colored">
+		<br>
 		
 		<div id="intro-popover">
 			<button type="button" class="btn btn-sm btn-info" data-toggle="popover" title="WHY WE ASK YOUR NAME"
@@ -42,7 +42,10 @@
 	<!-- input forms begin -->
 	<div class="row mt-4">
 		<div class="col-lg-8 offset-lg-2">
-			<form ng-submit="$ctrl.btnClick()">
+			<h4 class="text-center">Free Mortgage Quote and Calculator In Three Easy Steps</h4>
+			<hr class="colored">
+			<h5><strong><span class="badge badge-pill badge-primary">Step &nbsp;1:</span></strong></h5>
+			<form ng-submit="$ctrl.btnClick()" class="text-center">
 				<!-- Type of property question -->
 				<div class="form-group">
 					<label for="propertyType" class="lead">Type of property</label>
@@ -65,7 +68,7 @@
 				</div>
 				
 				<button type="submit" class="btn jbtn jbtn-primary">
-					See Your Results
+					On To Step 2
 				</button>
 			</form>
 		</div>

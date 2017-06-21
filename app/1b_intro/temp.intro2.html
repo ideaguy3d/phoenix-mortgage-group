@@ -1,4 +1,3 @@
-
 <div class="container text-center">
 	<br>
 	<h3>At Phoenix Mortgage We Understand That Purchasing A Home Can Be A Stressful Time. We Want To Help Get Rid Of The
@@ -10,8 +9,9 @@
 		<!-- inner facet 3a top -->
 		<div class="text-center bg-inverse-t50">
 			<h4 ng-if="!$ctrl.someoneContact" ng-hide="$ctrl.userClickedNo">
-				Would you like a real person to call you to make all of this much easier by doing this calculating
-				for you? </h4>
+				Would You Like A Real Person To Contact You And Make All Of This Much Easier By Doing The Calculations
+				For You?
+			</h4>
 			<p ng-if="$ctrl.someoneContact">{{ $ctrl.someoneContact }}</p>
 			<p ng-if="$ctrl.pmgError">{{ $ctrl.pmgError }}</p>
 		</div>
@@ -55,18 +55,25 @@
 			<!-- Form to collect email and number -->
 			<form id="contact-form" class="form-inline" ng-submit="$ctrl.btnClick()">
 				<div class="mx-auto" style="width: 60%;">
-					<label class="sr-only" for="email">Email</label>
-					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
-						<div class="input-group-addon">@</div>
-						<input type="email" class="form-control mb-2 mr-sm-2 mb-sm-0" id="email" required
-						       ng-model="$ctrl.activeSlide.intro2.email" placeholder="email">
-					</div>
-					<br>
 					<label class="sr-only" for="number">Number</label>
+					<h6 class="bg-inverse-t50">What Is A Good Phone Number We Can Reach You At?</h6>
+					<!-- phone input -->
 					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
 						<div class="input-group-addon">#</div>
 						<input type="tel" class="form-control mb-2 mr-sm-2 mb-sm-0" id="number" required
 						       ng-model="$ctrl.activeSlide.intro2.phoneNumber" placeholder="Phone Number">
+					</div>
+					
+					<br>
+					
+					<label class="sr-only" for="email">Email</label>
+					<h6 class="bg-inverse-t50">We Can Also E-mail you with Up To Date Personalized Quotes and Calculations Regarding Your
+					    Mortgage.</h6>
+					<!-- email input -->
+					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+						<div class="input-group-addon">@</div>
+						<input type="email" class="form-control mb-2 mr-sm-2 mb-sm-0" id="email" required
+						       ng-model="$ctrl.activeSlide.intro2.email" placeholder="email">
 					</div>
 					<br>
 					<button type="submit" class="btn btn-success">Continue</button>
