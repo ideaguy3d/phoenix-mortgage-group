@@ -17,7 +17,7 @@
     function CompCtrlClass(pmgUtilityService) {
         var vm = this;
         vm.realPerson = true;
-
+        vm.clickedYes = false;
 
         var pmgData = function () {
             var zName = "name: " + vm.activeSlide.intro2.username + " \n ";
@@ -34,6 +34,7 @@
         }
 
         vm.yesClick = function () {
+            vm.clickedYes = !vm.clickedYes;
             vm.endSlide = true;
             vm.realPerson = !vm.realPerson;
         };
@@ -50,12 +51,16 @@
             var c_email = vm.activeSlide.intro2.email;
             // this is the all important Data !!
             var c_message = pmgData();
+            var responseMessage = jQuery('#ajax-response');
 
             if (!vm.endSlide) {
                 var activeKey = pmgUtilityService.activeKey(vm.activeSlide);
                 vm.activeSlide[activeKey].active = false;
                 vm.activeSlide[activeKey].qState = 'answered';
                 vm.activeSlide.propertyUsed.active = true;
+                if(vm.activeSlide.intro2.email === '') {
+                    console.log("no email was entered!!");
+                }
                 return;
             }
             vm.someoneContact = "Thanks "+vm.activeSlide.intro.username
@@ -64,10 +69,8 @@
             /*----------------
               -- Send Email --
               ----------------*/
-            var responseMessage = jQuery('#ajax-response');
-
             // Front End Validation
-            var validationCheck = (c_email == "" || c_message == "") || (!isValidEmailAddress(c_email) );
+            var validationCheck = (c_email === "" || c_message === "") || (!isValidEmailAddress(c_email) );
             if (validationCheck) {
                 vm.pmgError = "Please correct mistakes.";
                 responseMessage.fadeIn(500);
@@ -89,7 +92,7 @@
                         jQuery('#contact-form button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
                     },
                     success: function (result) {
-                        if (result.sendstatus == 1) {
+                        if (result.sendstatus === 1) {
                             responseMessage.html(result.message);
                             responseMessage.fadeIn(500);
                             $('#contact-form').fadeOut(500);

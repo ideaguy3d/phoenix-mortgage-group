@@ -1,11 +1,14 @@
-<div class="container text-center">
+<div class="container">
 	<br>
-	<h3>At Phoenix Mortgage We Understand That Purchasing A Home Can Be A Stressful Time. We Want To Help Get Rid Of The
-	    Hassle, So You Can Enjoy The View.</h3>
+	<h3 class="text-center">
+		At Phoenix Mortgage We Understand That Purchasing A Home Can Be A Stressful Time. We Want To
+		Help Get Rid Of The Hassle, So You Can Enjoy The View.
+	</h3>
 </div>
 <!-- "Want someone to contact you?" section -->
 <section class="page-section-p50 pricing bg-t100">
 	<div class="container wow fadeIn">
+		<h5><strong><span class="badge badge-pill badge-primary">Step &nbsp;2:</span></strong></h5>
 		<!-- inner facet 3a top -->
 		<div class="text-center bg-inverse-t50">
 			<h4 ng-if="!$ctrl.someoneContact" ng-hide="$ctrl.userClickedNo">
@@ -15,7 +18,6 @@
 			<p ng-if="$ctrl.someoneContact">{{ $ctrl.someoneContact }}</p>
 			<p ng-if="$ctrl.pmgError">{{ $ctrl.pmgError }}</p>
 		</div>
-		
 		<!-- inner facet 3a bottom -->
 		<div ng-if="$ctrl.realPerson" class="row">
 			<!-- Button Yes -->
@@ -59,28 +61,42 @@
 					<h6 class="bg-inverse-t50">What Is A Good Phone Number We Can Reach You At?</h6>
 					<!-- phone input -->
 					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
-						<div class="input-group-addon">#</div>
+						<div class="input-group-addon">Phone Number</div>
 						<input type="tel" class="form-control mb-2 mr-sm-2 mb-sm-0" id="number" required
 						       ng-model="$ctrl.activeSlide.intro2.phoneNumber" placeholder="Phone Number">
 					</div>
 					
 					<br>
 					
+					<h6 class="bg-inverse-t50">
+						We Can Also E-mail you with Up To Date Personalized Quotes and Calculations
+						Regarding Your Mortgage.
+					</h6>
+					
+					<!-- email Yes click email !required -->
 					<label class="sr-only" for="email">Email</label>
-					<h6 class="bg-inverse-t50">We Can Also E-mail you with Up To Date Personalized Quotes and Calculations Regarding Your
-					    Mortgage.</h6>
-					<!-- email input -->
 					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
+						<div class="input-group-addon">Email</div>
+						<input type="email" class="form-control mb-2 mr-sm-2 mb-sm-0"
+						       id="email" required
+						       ng-model="$ctrl.activeSlide.intro2.email" placeholder="Email">
+					</div>
+					
+					<!-- email No click email required
+					<label class="sr-only" for="email2">Email</label>
+					<div ng-show="!$ctrl.clickedYes" class="input-group mb-2 mr-sm-2 mb-sm-0">
 						<div class="input-group-addon">@</div>
-						<input type="email" class="form-control mb-2 mr-sm-2 mb-sm-0" id="email" required
+						<input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0"
+						       id="email2" required
 						       ng-model="$ctrl.activeSlide.intro2.email" placeholder="email">
 					</div>
+					-->
 					<br>
-					<button type="submit" class="btn btn-success">Continue</button>
+					<button type="submit" class="btn btn-success">On To Last Step</button>
 				</div>
 			</form>
 		</div>
 		<!-- jQuery element for ajax response area -->
-		<h1 id="ajax-response" class="bg-inverse-t50 text-center"></h1>
+		<div id="ajax-response" class="bg-inverse-t50 text-center"></div>
 	</div>
 </section>
