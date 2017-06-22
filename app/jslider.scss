@@ -5,6 +5,11 @@ www.julius3d.com
 
 $jblack: #434343;
 
+img#pmg-logo-top-img {
+	width: 175px;
+	height: 100px;
+}
+
 #pmg-calc {
 	color: $jblack;
 	position: relative;
@@ -57,11 +62,47 @@ $jblack: #434343;
 	.badge-primary {
 		background-color: #C2B49A;
 	}
+	
+	.pmg-form-width {
+		width: 60%;
+	}
 }
 
 @media screen and (max-width: 576px) {
+	img#pmg-logo-top-img{
+		width: 78px;
+		height: 44px;
+	}
+	
+	a.btn.btn-block.btn-full-width {
+		padding: 8px;
+	}
+	
 	#pmg-calc {
 		width: 320px;
+		
+		h1,h2,h3,h4,h5,h6 {
+			font-size: 1rem;
+		}
+		
+		input.form-control {
+			font-size: 1.0rem;
+		}
+		
+		.input-group-addon {
+			height: 38px;
+		}
+		
+		.pmg-form-width {
+			width: 100%;
+		}
+		
+		.pricing .pricing-item {
+			padding: 8px;
+			width: 150px;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 }
 

@@ -2,6 +2,10 @@
 Julius Alvarado
 www.julius3d.com
 */
+img#pmg-logo-top-img {
+  width: 175px;
+  height: 100px; }
+
 #pmg-calc {
   color: #434343;
   position: relative;
@@ -28,10 +32,30 @@ www.julius3d.com
     cursor: crosshair; }
   #pmg-calc .badge-primary {
     background-color: #C2B49A; }
+  #pmg-calc .pmg-form-width {
+    width: 60%; }
 
 @media screen and (max-width: 576px) {
+  img#pmg-logo-top-img {
+    width: 78px;
+    height: 44px; }
+  a.btn.btn-block.btn-full-width {
+    padding: 8px; }
   #pmg-calc {
-    width: 320px; } }
+    width: 320px; }
+    #pmg-calc h1, #pmg-calc h2, #pmg-calc h3, #pmg-calc h4, #pmg-calc h5, #pmg-calc h6 {
+      font-size: 1rem; }
+    #pmg-calc input.form-control {
+      font-size: 1.0rem; }
+    #pmg-calc .input-group-addon {
+      height: 38px; }
+    #pmg-calc .pmg-form-width {
+      width: 100%; }
+    #pmg-calc .pricing .pricing-item {
+      padding: 8px;
+      width: 150px;
+      margin-left: auto;
+      margin-right: auto; } }
 
 .ui-draggable, .ui-droppable {
   background-position: top; }

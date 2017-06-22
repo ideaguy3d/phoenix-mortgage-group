@@ -1,13 +1,11 @@
-<div class="container">
-	<br>
-	<h3 class="text-center">
-		At Phoenix Mortgage We Understand That Purchasing A Home Can Be A Stressful Time. We Want To
-		Help Get Rid Of The Hassle, So You Can Enjoy The View.
-	</h3>
-</div>
+
 <!-- "Want someone to contact you?" section -->
 <section class="page-section-p50 pricing bg-t100">
 	<div class="container wow fadeIn">
+		<h3 class="text-center bg-inverse-t50">
+			At Phoenix Mortgage We Understand That Purchasing A Home Can Be A Stressful Time. We Want To
+			Help Get Rid Of The Hassle, So You Can Enjoy The View.
+		</h3>
 		<h5><strong><span class="badge badge-pill badge-primary">Step &nbsp;2:</span></strong></h5>
 		<!-- inner facet 3a top -->
 		<div class="text-center bg-inverse-t50">
@@ -21,7 +19,7 @@
 		<!-- inner facet 3a bottom -->
 		<div ng-if="$ctrl.realPerson" class="row">
 			<!-- Button Yes -->
-			<div class="col-md-4 offset-md-2">
+			<div class="col-xs-2 offset-xs-4 col-sm-2 offset-sm-4 col-md-4 offset-md-2">
 				<div class="pricing-item featured-first">
 					<div class="price">
 						<h1>
@@ -37,7 +35,7 @@
 				</div>
 			</div>
 			<!-- Button No -->
-			<div class="col-md-4">
+			<div class="col-xs-2 col-sm-2 col-md-4">
 				<div class="pricing-item featured-first">
 					<div class="price">
 						<h1>
@@ -46,8 +44,8 @@
 						</h1>
 					</div>
 					<hr class="colored">
-					<h4><a href="#" class="btn btn-secondary" ng-click="$ctrl.noClick()"><strong>No</strong></a>
-					</h4>
+					<h4><a href="#" class="btn btn-secondary" ng-click="$ctrl.noClick()">
+						<strong>No</strong></a></h4>
 				</div>
 			</div>
 		</div>
@@ -56,12 +54,12 @@
 			<br>
 			<!-- Form to collect email and number -->
 			<form id="contact-form" class="form-inline" ng-submit="$ctrl.btnClick()">
-				<div class="mx-auto" style="width: 60%;">
+				<div class="mx-auto pmg-form-width">
 					<label class="sr-only" for="number">Number</label>
 					<h6 class="bg-inverse-t50">What Is A Good Phone Number We Can Reach You At?</h6>
 					<!-- phone input -->
 					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
-						<div class="input-group-addon">Phone Number</div>
+						<div class="input-group-addon">#</div>
 						<input type="tel" class="form-control mb-2 mr-sm-2 mb-sm-0" id="number" required
 						       ng-model="$ctrl.activeSlide.intro2.phoneNumber" placeholder="Phone Number">
 					</div>
@@ -76,7 +74,7 @@
 					<!-- email Yes click email !required -->
 					<label class="sr-only" for="email">Email</label>
 					<div class="input-group mb-2 mr-sm-2 mb-sm-0">
-						<div class="input-group-addon">Email</div>
+						<div class="input-group-addon">@</div>
 						<input type="email" class="form-control mb-2 mr-sm-2 mb-sm-0"
 						       id="email" required
 						       ng-model="$ctrl.activeSlide.intro2.email" placeholder="Email">

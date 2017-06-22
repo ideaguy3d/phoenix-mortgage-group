@@ -48,7 +48,7 @@
 <!-- button at top of page -->
 <a class="btn btn-block btn-full-width" href="http://www.phoenixmortgagegroup.com/default.aspx"
    target="_blank">
-	<img src="img/logo-dark.png" alt="logo" width="175" height="100">
+	<img id="pmg-logo-top-img" src="img/logo-dark.png" alt="logo">
 </a>
 
 <header class="masthead" style="background-image: url('img/view1.jpg');">
@@ -208,10 +208,9 @@
 			</div>
 		</div>
 	</div>
-	
-	
-</header>
 
+
+</header>
 
 
 <!-- Footer...  style="background-image: url('img/kansas-bg.jpg'); background-position: center 160px;" -->
@@ -245,8 +244,10 @@
 <script src="vendor/angular/angular.min.js"></script>
 
 <script type="text/javascript">
-	var phoenixMortgageGroupWidthCheck;
-	jQuery()
+    var phoenixMortgageGroupWidthCheck;
+    jQuery(document).ready(function () {
+		
+    });
 </script>
 
 <!-- Custom JavaScript -->

@@ -20,7 +20,7 @@
 		<div id="intro-popover">
 			<button type="button" class="btn btn-sm btn-info" data-toggle="popover" title="WHY WE ASK YOUR NAME"
 			        data-container="#intro-popover" data-placement="bottom"
-			        data-trigger="click hover"
+			        data-trigger="focus hover"
 			        data-content="At Phoenix Mortgage we believe in providing you the superior streamlined service of a large corporation while maintaining the personalized, small town values based relationships that we would offer our family.">
 				<strong>Why are we asking your name?</strong>
 			</button>
@@ -31,7 +31,7 @@
 
                 $(function () {
                     $('[data-toggle="popover"]').popover({
-	                    delay: { "show": 20, "hide": 200 },
+	                    delay: { "show": 20, "hide": 20 },
 	                    animation: true
                     })
                 })
