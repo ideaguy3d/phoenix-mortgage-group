@@ -59,6 +59,11 @@ $jblack: #434343;
 	}
 }
 
+@media screen and (max-width: 576px) {
+	#pmg-calc {
+		width: 320px;
+	}
+}
 
 
 .ui-draggable, .ui-droppable {

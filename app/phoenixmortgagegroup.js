@@ -123,8 +123,9 @@
         // make a copy of the data
         pmgDataModel = $scope.activeSlide;
 
-        var closeCondition = $scope.activeSlide.closeWindowCondition;
-        if (closeCondition) {
+        var closeCondition = $scope.activeSlide.closeWindowCondition,
+            justClose = false;
+        if (justClose) {
             $window.onbeforeunload = function (e) {
                 var text = "Thanks for visiting.";
                 pmgUtilityService.sendEmail();
@@ -166,7 +167,7 @@
                 " with an estimated balance of " + pmgDataModel.remainingBalance2.balance + bar;
             var wants2borrow = "Wants to borrow: " + pmgDataModel.borrow.amount + bar;
             var credit = "Credit estimate: " + pmgDataModel.creditScore.creditEstimate + bar;
-            var firstHomePurchase = 'First Time Purchasing a home: '+pmgDataModel.firstHomePurchase.answer+bar;
+            var firstHomePurchase = 'First Time Purchasing a home: ' + pmgDataModel.firstHomePurchase.answer + bar;
             var priorMilitary = "Prior military: " + pmgDataModel.military.priorMilitary + bar;
             var hasVaLoan = "Has a va loan: " + pmgDataModel.vaLoan.hadVaLoan + bar;
             var bankrupt = "Bankrupt: " + pmgDataModel.bankruptcyQuestion.bankruptcy

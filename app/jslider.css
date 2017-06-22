@@ -29,5 +29,9 @@ www.julius3d.com
   #pmg-calc .badge-primary {
     background-color: #C2B49A; }
 
+@media screen and (max-width: 576px) {
+  #pmg-calc {
+    width: 320px; } }
+
 .ui-draggable, .ui-droppable {
   background-position: top; }

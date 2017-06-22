@@ -265,13 +265,24 @@ header.masthead .scroll-down .btn:hover {
     outline: none;
 }
 
+header.masthead {
+    height: 100vh;
+    min-height: 700px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 @media (min-width: 992px) {
+    /*  // old style rule that made everything
+        // disappear at 992px
     header.masthead {
         height: 100vh;
         min-height: 700px;
         padding-top: 0;
         padding-bottom: 0;
     }
+    */
+
 
     header.masthead .masthead-img {
         max-width: 250px;
