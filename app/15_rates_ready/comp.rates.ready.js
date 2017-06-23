@@ -18,7 +18,7 @@
         var vm = this;
 
         vm.btnClick = function () {
-            // send user to pmg login page: https://phoenixmortgagegroup.mortgage-application.net/MyAccount/AccountLogin.aspx
+            // pmg login page: https://phoenixmortgagegroup.mortgage-application.net/MyAccount/AccountLogin.aspx
             location.assign("http://www.phoenixmortgagegroup.com/Calculators/Menu.aspx");
             // Phoenix Mortgage Calculators: http://www.phoenixmortgagegroup.com/Calculators/Menu.aspx
         };

@@ -26,7 +26,7 @@
             if(vm.activeSlide.bankruptcy.go2forclosure) {
                 vm.activeSlide.foreclosure.active = true;
             } else {
-                vm.activeSlide.currentAddress.active = true;
+                vm.activeSlide.ratesReady.active = true;
             }
         };
 

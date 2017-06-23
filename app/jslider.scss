@@ -98,6 +98,10 @@ img#pmg-logo-top-img {
 			font-size: 0.75rem;
 		}
 		
+		.col-sm-2 {
+			width: 160px;
+		}
+		
 		.input-group-addon {
 			height: 38px;
 		}
@@ -111,6 +115,10 @@ img#pmg-logo-top-img {
 			width: 150px;
 			margin-left: auto;
 			margin-right: auto;
+		}
+		
+		#pmg-rates-ready {
+			width: 100%;
 		}
 	}
 }

@@ -52,6 +52,8 @@ img#pmg-logo-top-img {
     #pmg-calc .btn {
       padding: .25rem 0.5rem !important;
       font-size: 0.75rem; }
+    #pmg-calc .col-sm-2 {
+      width: 160px; }
     #pmg-calc .input-group-addon {
       height: 38px; }
     #pmg-calc .pmg-form-width {
@@ -60,7 +62,9 @@ img#pmg-logo-top-img {
       padding: 8px;
       width: 150px;
       margin-left: auto;
-      margin-right: auto; } }
+      margin-right: auto; }
+    #pmg-calc #pmg-rates-ready {
+      width: 100%; } }
 
 .ui-draggable, .ui-droppable {
   background-position: top; }
