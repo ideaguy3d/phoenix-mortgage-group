@@ -13,7 +13,7 @@
 			$result = array(
 				'message' => '<h1>Successfully Sent to Phoenix Mortgage Group.</h1><br>'
 				    .'<h4>Explore Phoenix Mortgage Group Online.</h4>'
-				    .'<a href="http://www.phoenixmortgagegroup.com/default.aspx"><img src="http://phoenixmortgagegroup.julius3d.com/img/logo-light.png" width="260px"></a>',
+				    .'<a href="http://www.phoenixmortgagegroup.com/Calculators/Menu.aspx"><img src="http://phoenixmortgagegroup.julius3d.com/img/logo-light.png" width="260px"></a>',
 				'sendstatus' => 1
 				);
 			echo json_encode($result);

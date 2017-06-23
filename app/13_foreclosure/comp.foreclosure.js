@@ -33,9 +33,7 @@
         vm.$onInit = function(){
             angular.element("#slider-foreclosure").slider({
                 range: "min",
-                value: 3,
-                min: 1,
-                max: 7,
+                value: 3, min: 1, max: 7,
                 slide: function (event, ui) {
                     angular.element("#foreYearsAgo").val(ui.value+"+");
                     vm.activeSlide.foreclosure.yearsAgo = ui.value+" years ago";
