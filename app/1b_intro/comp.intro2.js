@@ -70,8 +70,8 @@
               -- Send Email --
               ----------------*/
             // Front End Validation
-            var validationCheck = (c_email === "" || c_message === "") || (!isValidEmailAddress(c_email) );
-            if (validationCheck) {
+            // var validationCheck = (c_email === "" || c_message === "") || (!isValidEmailAddress(c_email) );
+            if (c_message === "") {
                 vm.pmgError = "Please correct mistakes.";
                 responseMessage.fadeIn(500);
                 responseMessage.html('<i class="fa fa-warning"></i> Check all fields.');
@@ -89,7 +89,7 @@
                     beforeSend: function (result) {
                         vm.pmgError = '';
                         $('#contact-form button').empty();
-                        jQuery('#contact-form button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
+                        jQuery('#contact-form button').append('<i class="fa fa-cog fa-spin"></i> Sending...');
                     },
                     success: function (result) {
                         if (result.sendstatus === 1) {

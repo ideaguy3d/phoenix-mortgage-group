@@ -38,7 +38,12 @@
                 min: 1,
                 max: 7,
                 slide: function (event, ui) {
-                    angular.element("#bankYearsAgo").val(ui.value+"+");
+                    if (ui.value === 7) {
+                        angular.element("#bankYearsAgo").val(ui.value + "+");
+                    } else {
+                        angular.element("#bankYearsAgo").val(ui.value);
+                    }
+
                     vm.activeSlide.bankruptcy.yearsAgo = ui.value+" years ago";
                 }
             });

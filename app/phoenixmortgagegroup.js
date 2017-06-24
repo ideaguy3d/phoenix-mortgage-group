@@ -22,13 +22,13 @@
             intro: {
                 active: true,
                 qState: 'unanswered',
-                username: 'Julius',
+                username: '',
                 loanType: 'refinance',
                 propertyType: 'singleFamily'
             },
             intro2: {
-                email: 'hot@stuff.com',
-                phoneNumber: '209'
+                email: '',
+                phoneNumber: ''
             },
             propertyUsed: {
                 active: false,

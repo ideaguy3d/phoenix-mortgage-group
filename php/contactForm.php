@@ -12,7 +12,7 @@
 		if (mail($to, $subject, $message, $from)) { 
 			$result = array(
 				'message' => '<h1>Successfully Sent to Phoenix Mortgage Group.</h1><br>'
-				    .'<h4>Explore Phoenix Mortgage Group Online.</h4>'
+				    .'<h4>A Representative Will Contact You Shortly. Please Click On The Link Below And Enjoy The Best Free Mortgage Calculators Available.</h4>'
 				    .'<a href="http://www.phoenixmortgagegroup.com/Calculators/Menu.aspx"><img src="http://phoenixmortgagegroup.julius3d.com/img/logo-light.png" width="260px"></a>',
 				'sendstatus' => 1
 				);
