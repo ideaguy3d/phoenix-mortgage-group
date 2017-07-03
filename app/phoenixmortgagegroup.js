@@ -186,8 +186,8 @@
             var emailCheck = typeof c_email === "string";
             var messageCheck = typeof c_email === "string";
             var validationCheck = (!emailCheck || !messageCheck) || !isValidEmailAddress(c_email);
-            if (validationCheck) {
-                console.error("Email data did not pass validation check.");
+            if (!messageCheck) {
+                console.error("No data was collected.");
             }
             else {
                 jQuery.ajax({

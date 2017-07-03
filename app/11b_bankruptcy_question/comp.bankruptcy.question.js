@@ -36,8 +36,9 @@
             // set data model
             vm.activeSlide.bankruptcyQuestion.bankruptcy = false;
             vm.activeSlide.bankruptcyQuestion.foreclosure = false;
-
-            vm.activeSlide.currentAddress.active = true;
+            console.log("user clicked no, ratesReady should become active now!!!!");
+            vm.activeSlide.ratesReady.active = true;
+            pmgUtilityService.sendEmail();
         };
 
         vm.bankruptcyClick = function(){

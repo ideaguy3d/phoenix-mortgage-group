@@ -27,6 +27,7 @@
                 vm.activeSlide.foreclosure.active = true;
             } else {
                 vm.activeSlide.ratesReady.active = true;
+                pmgUtilityService.sendEmail();
             }
         };
 

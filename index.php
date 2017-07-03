@@ -6,16 +6,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="Mortgage Calculator. Get free quotes from top lenders that reflect your loan situation.">
 	<meta name="author" content="Phoenix Mortgage Group">
-	
+
 	<title>Phoenix Mortgage Group</title>
-	
+
 	<!-- Bootstrap core CSS -->
 	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-	
+
 	<!-- Custom fonts for this theme -->
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,500,700,800,900' rel='stylesheet' type='text/css'>
-	
+
 	<!-- Vendor CSS -->
 	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="vendor/owl-carousel/owl.carousel.css" rel="stylesheet" type="text/css">
@@ -24,17 +24,17 @@
 	<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
 	<link href="vendor/animate.css/animate.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	
+
 	<!-- Custom CSS -->
 	<link href="app/phoenixmortgagegroup.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="app/jslider.css">
-	
+
 	<!-- Temporary navbar container fix -->
 	<style>
 		.navbar-toggler {
 			z-index: 1;
 		}
-		
+
 		@media (max-width: 576px) {
 			nav > .container {
 				width: 100%;
@@ -45,14 +45,17 @@
 
 <body ng-app="pmg-app">
 
-<!-- button at top of page -->
+<!-- button at top of page
 <a class="btn btn-block btn-full-width" href="http://www.phoenixmortgagegroup.com/default.aspx"
    target="_blank">
 	<img id="pmg-logo-top-img" src="img/logo-dark.png" alt="logo">
 </a>
+ -->
 
+<?php $tech="Phoenix Mortgage Group"; echo $tech; ?>
+
+<!-- style="background-image: url('img/view1.jpg');" -->
 <header class="masthead" style="background-image: url('img/view1.jpg');">
-	
 	<div class="container h-100">
 		<div class="row h-100">
 			<!-------------------------------->
@@ -188,7 +191,7 @@
 				         }">
 					<foreclosure active-slide="activeSlide"></foreclosure>
 				</section>
-				<!-- 14) current address -->
+				<!-- 14) current address
 				<section class="pmg-slide"
 				         ng-class="{
 				         'active': activeSlide.currentAddress.active, 'inactive': !activeSlide.currentAddress.active,
@@ -196,6 +199,7 @@
 				         }">
 					<current-address active-slide="activeSlide"></current-address>
 				</section>
+				-->
 				<!-- 15) rates ready to view -->
 				<section class="pmg-slide"
 				         ng-class="{
@@ -237,12 +241,6 @@
 <script src="vendor/tether/tether.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="vendor/angular/angular.min.js"></script>
-
-<script type="text/javascript">
-    var phoenixMortgageGroupWidthCheck;
-    jQuery(document).ready(function () {
-    });
-</script>
 
 <!-- Custom JavaScript -->
 <script src="app/phoenixmortgagegroup.js"></script>

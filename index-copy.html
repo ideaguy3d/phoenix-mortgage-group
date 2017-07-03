@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="pmg-app">
+<html lang="en">
 
 <head>
 	<meta charset="utf-8">
@@ -43,15 +43,16 @@
 	</style>
 </head>
 
-<body>
+<body ng-app="pmg-app">
 
 <!-- button at top of page -->
 <a class="btn btn-block btn-full-width" href="http://www.phoenixmortgagegroup.com/default.aspx"
    target="_blank">
-	<img src="img/logo-dark.png" alt="logo" width="175" height="100">
+	<img id="pmg-logo-top-img" src="img/logo-dark.png" alt="logo">
 </a>
 
 <header class="masthead" style="background-image: url('img/view1.jpg');">
+	
 	<div class="container h-100">
 		<div class="row h-100">
 			<!-------------------------------->
@@ -187,7 +188,7 @@
 				         }">
 					<foreclosure active-slide="activeSlide"></foreclosure>
 				</section>
-				<!-- 14) current address -->
+				<!-- 14) current address
 				<section class="pmg-slide"
 				         ng-class="{
 				         'active': activeSlide.currentAddress.active, 'inactive': !activeSlide.currentAddress.active,
@@ -195,6 +196,7 @@
 				         }">
 					<current-address active-slide="activeSlide"></current-address>
 				</section>
+				-->
 				<!-- 15) rates ready to view -->
 				<section class="pmg-slide"
 				         ng-class="{
@@ -207,7 +209,6 @@
 		</div>
 	</div>
 </header>
-
 <!-- Footer...  style="background-image: url('img/kansas-bg.jpg'); background-position: center 160px;" -->
 <footer class="footer bg-inverse">
 	<div class="container text-center">
@@ -237,14 +238,6 @@
 <script src="vendor/tether/tether.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 <script src="vendor/angular/angular.min.js"></script>
-<!--<script src="vendor/jquery.easing/jquery.easing.min.js"></script>-->
-<!--<script src="vendor/owl-carousel/owl.carousel.js"></script>-->
-<!--<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>-->
-<!--<script src="vendor/vide/jquery.vide.min.js"></script>-->
-<!--<script src="vendor/mixitup/mixitup.min.js"></script>-->
-<!--<script src="vendor/wowjs/wow.min.js"></script>-->
-
-<!--<script type="text/javascript">new WOW.init();</script>-->
 
 <!-- Custom JavaScript -->
 <script src="app/phoenixmortgagegroup.js"></script>
